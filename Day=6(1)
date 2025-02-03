@@ -1,0 +1,359 @@
+  Day-6 Session
+====================================================
+Part-1
+====================================================
+====================================================
+Yesteday Day-5 Session===== we allready  complet  
+
+touch         ==> to create blank file
+mkdir         ==> to create directory
+mkdir -p      ==> to create nested directory
+cd  <dirname> ==> to enter into any directory
+
+ls            ==> to check data listing
+ls -R         ==> to check entire data listing in single command
+tree          ==> to check data listing in tree formats
+cd ..         ==> just go on one level back 
+cd ../..      ==>  just go on two level back
+cd /          ==> always reach on  parent directory
+cd            ==> to go in my home account
+cd -          ==> to go on last working directory  
+cd ~          ==> to go in my home directory
+cd .          ==> current working directory
+====================================================
+Create Space in any filename and Directoryname
+====================================================
+Double TAB and Single TAB
+what is the use of TAB key  ?
+
+1- used to complete any path  
+2- command complete
+
+
+Single Tab and Two times Tab
+====================================================
+Missing Topics in yesterday Class ===> cat tac gedit VI VIM CP RM MV RENAME
+
+Will Covered These Topics in upcomming classes
+====================================================
+====================================================
+# ls /bin            ===> normal binary
+# ls /sbin           ===> Super binary
+# ls /usr/bin
+# ls /usr/sbin
+
+[root@localhost ~]# which clear
+/usr/bin/clear
+[root@localhost ~]# 
+[root@localhost ~]# which useradd
+/usr/sbin/useradd
+[root@localhost ~]# 
+[root@localhost ~]# which usermod
+/usr/sbin/usermod
+[root@localhost ~]# 
+[root@localhost ~]# which userdel
+/usr/sbin/userdel
+[root@localhost ~]# 
+[root@localhost ~]# which passwd
+/usr/bin/passwd
+[root@localhost ~]# which tree
+/usr/bin/tree
+[root@localhost ~]# 
+[root@localhost ~]# which gedit 
+/usr/bin/gedit
+[root@localhost ~]# 
+[root@localhost ~]# which vi
+/usr/bin/vi
+[root@localhost ~]# which vim
+/usr/bin/vim
+[root@localhost ~]# 
+[root@localhost ~]# which nagios
+====================================================
+Package Management  OR RPMs Management ===> 
+====================================================
+First we will Focus on Command Syntax With Rules
+====================================================
+Rule-1    # touch  abc
+Rule-2    # touch  /tmp/abc
+Rule-3    # date  # cal   # pwd  # reboot 
+====================================================
+[root@localhost ~]# 
+[root@localhost ~]# useradd rajeev
+[root@localhost ~]# 
+[root@localhost ~]# passwd rajeev
+Changing password for user rajeev.
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# touch abc
+[root@localhost ~]# 
+[root@localhost ~]# touch /tmp/abc
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc  anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@localhost ~]# 
+[root@localhost ~]# ls /tmp
+abc
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-bluetooth.service-deUSVc
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-colord.service-5QE1YJ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-dbus-broker.service-R2sXOd
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-fwupd.service-6SJn8t
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-ModemManager.service-NGlccX
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-power-profiles-daemon.service-HlHOSP
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-rtkit-daemon.service-fCp6tC
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-switcheroo-control.service-0L1YBw
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-systemd-logind.service-8RfaH1
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-upower.service-Gs25i3
+[root@localhost ~]# 
+====================================================
+Example:-1  Command without Value 
+Example:-2  Command with Value 
+Example:-3  Command with single option and with Values also
+Example:-4  Command with multiple Options and with values also 
+============================================
+Option always created by Developers  ==> adminitrator ==> we always use to option only as per need
+============================================
+What is the meaning of value and Options in any command why we use this ?
+How we can check how many options are created by developer in any command ?
+============================================ 
+Types of options in any command
+
+1- characters based options   ==> always started with  single Hyphen   
+2- word based  options        ==> always started with  double Hyphen   
+============================================
+# userdel  --help
+============================================
+Note:-
+============================================
+Note:-------
+[root@localhost ~]# date
+Sun Oct  6 09:29:38 AM IST 2024
+[root@localhost ~]# 
+[root@localhost ~]# cal
+    October 2024    
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30 31      
+                    
+[root@localhost ~]# 
+
+[root@localhost ~]# userdel 
+Usage: userdel [options] LOGIN
+
+Options:
+  -f, --force                   force some actions that would fail otherwise
+                                e.g. removal of user still logged in
+                                or files, even if not owned by the user
+  -h, --help                    display this help message and exit
+  -r, --remove                  remove home directory and mail spool
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -Z, --selinux-user            remove any SELinux user mapping for the user
+
+[root@localhost ~]# 
+[root@localhost ~]# userdel  --help
+====================================================
+[root@localhost ~]# useradd sumit 
+[root@localhost ~]# userdel  --help
+[root@localhost ~]# userdel --help
+Usage: userdel [options] LOGIN
+Options:
+  -f, --force    ==================force some actions that would fail otherwise
+                                   e.g. removal of user still logged in
+                                   or files, even if not owned by the user
+  -h, --help       ===============display this help message and exit
+  -r, --remove   =================remove home directory and mail spool
+  -R, --root CHROOT_DIR ----------directory to chroot into
+  -P, --prefix PREFIX_DIR --------prefix directory where are located the /etc/* files
+  -Z, --selinux-user  ------------remove any SELinux user mapping for the user
+
+[root@localhost ~]# 
+[root@localhost ~]# userdel -h
+Usage: userdel [options] LOGIN
+
+Options:
+  -f, --force     ================ force some actions that would fail otherwise
+                                   e.g. removal of user still logged in
+                                   or files, even if not owned by the user
+  -h, --help   --------------------display this help message and exit
+  -r, --remove --------------------remove home directory and mail spool
+  -R, --root CHROOT_DIR------------directory to chroot into
+  -P, --prefix PREFIX_DIR ---------prefix directory where are located the /etc/* files
+  -Z, --selinux-user---------------remove any SELinux user mapping for the user
+
+[root@localhost ~]# 
+[root@localhost ~]# userdel  -r  sumit
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# useradd sumit
+[root@localhost ~]# 
+[root@localhost ~]# userdel  - r  sumit
+[root@localhost ~]# userdel  -r  sumit
+[root@localhost ~]# 
+[root@localhost ~]# useradd sumit
+[root@localhost ~]# 
+[root@localhost ~]# userdel -r sumit
+[root@localhost ~]# 
+[root@localhost ~]# useradd sumit
+[root@localhost ~]# 
+[root@localhost ~]# userdel --remove sumit
+[root@localhost ~]# 
+[root@localhost ~]# useradd sumit
+[root@localhost ~]# 
+[root@localhost ~]# 
+Single Charater  ===> option ==> can use with single hyphen 
+[root@localhost ~]# userdel  -fr sumit
+[root@localhost ~]# 
+[root@localhost ~]# useradd sumit
+[root@localhost ~]# 
+[root@localhost ~]# userdel  --fr sumit
+userdel: unrecognized option '--fr'
+Usage: userdel [options] LOGIN
+[root@localhost ~]# userdel  -f -r sumit
+[root@localhost ~]# 
+[root@localhost ~]# useradd sumit
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# userdel  -fr sumit
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# useradd sumit
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# userdel  --force  --remove  sumit
+[root@localhost ~]# 
+[root@localhost ~]# useradd sumit
+[root@localhost ~]# 
+[root@localhost ~]# ls 
+abc  anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# ls  -l   -r   -t   -h  
+     OR
+[root@localhost ~]# ls  -lrth  
+[root@localhost ~]# ls -lrth  /home
+================================================================
+================================================================
+[root@localhost ~]# mkdir -p  /kr/network/cloud
+[root@localhost ~]# 
+[root@localhost ~]# mkdir --parent  /kr/network/cloud/abc/xyz
+[root@localhost ~]# 
+
+[root@localhost ~]# mkdir  -h
+mkdir: invalid option -- 'h'
+Try 'mkdir --help' for more information.
+[root@localhost ~]# 
+
+[root@localhost ~]# mkdir /test
+[root@localhost ~]# 
+[root@localhost ~]# useradd  -d  user1
+useradd: invalid home directory 'user1'
+[root@localhost ~]# 
+
+[root@localhost ~]# useradd --help
+[root@localhost ~]# useradd  -d  /test/user1    user1
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# ls  /home
+rajeev  student  sumit
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# ls  /test
+user1
+[root@localhost ~]# 
+[root@localhost ~]# usermod  --help
+[root@localhost ~]# usermod -L sumit
+[root@localhost ~]# 
+[root@localhost ~]# usermod --lock  sumit
+[root@localhost ~]# id sumit
+uid=1002(sumit) gid=1002(sumit) groups=1002(sumit)
+[root@localhost ~]# 
+[root@localhost ~]# usermod  -u 1010 sumit
+[root@localhost ~]# 
+[root@localhost ~]# id sumit
+uid=1010(sumit) gid=1002(sumit) groups=1002(sumit)
+[root@localhost ~]# 
+[root@localhost ~]# useradd -c ITADMIN  -d  /test/kapil kapil  
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# ls /test
+kapil  user1
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# usermod  --help
+Usage: usermod [options] LOGIN
+[root@localhost ~]# man usermod 
+=====================================================
+[root@localhost ~]# man usermod 
+Press q to quit 
+=====================================================
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# usermod  -e  2025-12-31 kapil
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# useradd  soniya
+[root@localhost ~]# 
+[root@localhost ~]# cat  /etc/default/useradd 
+# useradd defaults file
+GROUP=100
+HOME=/home
+INACTIVE=-1
+EXPIRE=
+SHELL=/bin/bash
+SKEL=/etc/skel
+CREATE_MAIL_SPOOL=yes
+[root@localhost ~]# 
+[root@localhost ~]# userdel -rf kapil
+[root@localhost ~]# 
+[root@localhost ~]# ls  /test
+user1
+[root@localhost ~]# cat  /etc/passwd 
+[root@localhost ~]# userdel -rf user1
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# ls  /test
+[root@localhost ~]# 
+=====================================================
+[root@localhost ~]# ls --help
+[root@localhost ~]# 
+[root@localhost ~]# ls -R /kr
+/kr:
+network
+/kr/network:
+cloud
+/kr/network/cloud:
+abc
+/kr/network/cloud/abc:
+xyz
+/kr/network/cloud/abc/xyz:
+[root@localhost ~]# 
+[root@localhost ~]# ls  --recursive /kr
+/kr:
+network
+/kr/network:
+cloud
+/kr/network/cloud:
+abc
+/kr/network/cloud/abc:
+xyz
+/kr/network/cloud/abc/xyz:
+[root@localhost ~]# 
+======================================================
+#  ls  /etc
+#  ls  /data
+====================================================
+# cat   <options>   <filename>
+====================================================
+[root@localhost ~]# cat  -n    /etc/crontab 
+  129  cat /etc/passwd 
+  130  cat -n  /etc/passwd 
+  131  cat    /etc/crontab 
+  132  cat    /etc/crontab  /etc/passwd
+  133  cat   -n   /etc/crontab  /etc/passwd

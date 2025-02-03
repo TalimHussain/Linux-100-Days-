@@ -1,0 +1,285 @@
+Day-6 Part-2 Session
+============================================================================
+          File Creation and File Content Modification
+                  OR 
+            File Editing commands
+============================================================================
+Task-1 How we can read the content of any existing file in linux using cat command ?
+Task-2 How we can create files in linux and How we can edit the content of any file existing files as per needs ?
+============================================================================
+WHAT IS THE USE OF CAT COMMAND ?
+ans= It is used to read the content of any file on the terminal
+
+#  cat   <Available options>    <filelocation OR filename>
+====================================================
+  138  cat  /etc/crontab 
+  139  cat  /etc/passwd
+  140  cat  -n   /etc/crontab 
+  141  cat --help
+  142  cat --number   /etc/crontab 
+  143  cat -n  /etc/passwd 
+  144  cat  /etc/crontab 
+  145  cat  /etc/crontab   /etc/passwd
+  146  cat -n    /etc/crontab   /etc/passwd
+  147  cat /etc/crontab 
+  148  tac  /etc/crontab 
+  149  cat  /etc/crontab 
+  150  cat  -n /etc/crontab 
+  151  cat -b  /etc/crontab 
+  152  cat -n  /etc/passwd
+  153  cat -b  /etc/passwd
+  154  cat -b  /etc/crontab 
+  155  cat -n  /etc/crontab 
+
+[root@localhost ~]# cat  /etc/bluetooth/main.conf 
+[root@localhost ~]# 
+[root@localhost ~]# mkdir  /data
+[root@localhost ~]# 
+[root@localhost ~]# ls  /data
+[root@localhost ~]# 
+[root@localhost ~]# mkdir /data/mydata
+[root@localhost ~]# 
+[root@localhost ~]# ls /data
+mydata
+[root@localhost ~]# 
+[root@localhost ~]# touch  /data/abc
+[root@localhost ~]# 
+[root@localhost ~]# ls /data
+abc  mydata
+[root@localhost ~]# 
+[root@localhost ~]# du  -s -h   /data/abc 
+0	/data/abc
+[root@localhost ~]# 
+[root@localhost ~]# du  -sh   /data/abc 
+0	/data/abc
+[root@localhost ~]# du  -sh   /etc
+27M	/etc
+[root@localhost ~]# du  -s   /etc
+26888	/etc
+
+[root@localhost ~]# du  /etc
+
+[root@localhost ~]# 
+[root@localhost ~]# du  -s   /etc
+26888	/etc
+[root@localhost ~]# 
+[root@localhost ~]# du  -s   -h  /etc
+27M	/etc
+[root@localhost ~]# 
+[root@localhost ~]# du  -sh  /etc
+27M	/etc
+[root@localhost ~]# 
+
+[root@localhost ~]# 
+[root@localhost ~]# du  -hs  /etc
+27M	/etc
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# ls /data
+abc  mydata
+[root@localhost ~]# 
+[root@localhost ~]# du -sh /data/abc 
+0	/data/abc
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# cat /data/abc 
+[root@localhost ~]# 
+[root@localhost ~]# 
+============================================================================
+============================================================================
+Example
+1- gedit               ==> Condition-1  support only in GUI mode  Condition-2 Local to local ==> GUI mode 
+2- vi and vim command  ==> Supoort in both mode GUI + CLI mode + Local to local or Remote Login 
+============================================================================
+3- other commands as well   ==> nano and others
+============================================================================
+============================================================================
+Features of Vi ( Visual Editor ) command
+
+1-  Black and white color 
+2-  will not display the cursor positions  
+3-  not highlihts any spell errors OR syntax error
+4-  not recommended for any developers and linux admins.
+============================================================================
+Features of vim  ( VIM enhanced Editor )  OR  [  VI   improved ] command 
+
+1-  color full mode   
+2-  will display the cursor positions  automatically
+3-  will automatically highlihts any spell errors OR syntax errors
+4-  highly recommended for any developers and linux admins.
+================================================================
+Note:-  in RHEL-9 VI and VIM command basically have same features.
+VI   ===> vim-minimal 
+VIM  ===> vim-enhanced
+================================================================
+[root@localhost ~]# which gedit
+/usr/bin/gedit
+[root@localhost ~]# which vi
+/usr/bin/vi
+[root@localhost ~]# which vim 
+/usr/bin/vim
+[root@localhost ~]# 
+[root@localhost ~]# which rpm 
+/usr/bin/rpm
+[root@localhost ~]# 
+[root@localhost ~]# rpm  -q  -f  /usr/bin/gedit
+gedit-40.0-6.el9.x86_64
+[root@localhost ~]# 
+[root@localhost ~]# rpm  -q  -f  /usr/bin/vi
+vim-minimal-8.2.2637-15.el9.x86_64
+[root@localhost ~]# 
+[root@localhost ~]# rpm  -q  -f  /usr/bin/vim
+vim-enhanced-8.2.2637-15.el9.x86_64
+[root@localhost ~]# 
+[root@localhost ~]# rpm  -qf  /usr/bin/vim
+vim-enhanced-8.2.2637-15.el9.x86_64
+[root@localhost ~]# 
+===================================================
+Package Management ===> Chapter
+==================================================
+[root@localhost ~]# 
+[root@localhost ~]# which rpm 
+/usr/bin/rpm
+[root@localhost ~]# 
+[root@localhost ~]# rpm -qf  /usr/bin/rpm
+rpm-4.16.1.3-12.el9_0.x86_64
+[root@localhost ~]# 
+[root@localhost ~]# which tree
+/usr/bin/tree
+[root@localhost ~]# 
+[root@localhost ~]# rpm -qf  /usr/bin/tree
+tree-1.8.0-10.el9.x86_64
+[root@localhost ~]# 
+[root@localhost ~]# rpm  -e   tree
+[root@localhost ~]# 
+[root@localhost ~]# which tree
+/usr/bin/which: no tree in (/root/.local/bin:/root/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin)
+[root@localhost ~]# 
+[root@localhost ~]# tree  /home
+bash: tree: command not found...
+[root@localhost ~]# 
+[root@localhost ~]# which gedit
+/usr/bin/gedit
+[root@localhost ~]# which vi
+/usr/bin/vi
+[root@localhost ~]# which vim
+/usr/bin/vim
+[root@localhost ~]# 
+[root@localhost ~]# 
+===================================================
+[root@localhost ~]# gedit  /root/xyz
+
+Save
+
+[root@localhost ~]# ls
+abc  anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  xyz
+[root@localhost ~]# 
+
+[root@localhost ~]# cat  /root/xyz 
+Hello India
+Hello XYZ
+hello krishna
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# gedit  /root/xyz 
+[root@localhost ~]# cat /root/xyz 
+Hello India
+Hello XYZ
+hello krishna
+hello raj
+
+[root@localhost ~]# mkdir /linux 
+[root@localhost ~]# 
+[root@localhost ~]# gedit  /linux/abc
+[root@localhost ~]# cat /linux/abc 
+Hello abc
+Hello krishna
+
+[root@localhost ~]#
+[root@localhost ~]# mkdir /linux/data
+[root@localhost ~]# 
+[root@localhost ~]# ls /linux/data
+[root@localhost ~]# 
+[root@localhost ~]# cd  /linux/data
+[root@localhost data]# ls
+[root@localhost data]# cd
+[root@localhost ~]# 
+[root@localhost ~]# gedit
+
+[root@localhost ~]# cat  /tmp/india 
+Hrello s
+df
+sdf
+sdf
+sdfs
+dfsd
+fsd
+fds
+fsd
+fsdf
+sdf
+dsfdf
+[root@localhost ~]# 
+[root@localhost ~]# systemctl  isolate multi-user.target 
+
+Login:root
+password:redhat
+
+[root@localhost ~]# gedit   ===> will not support
+
+[root@localhost ~]# systemctl  isolate graphical.target 
+==================================================
+How we can create and save the file content using VI command
+
+[root@localhost ~]# vi  abc
+                      OR
+[root@localhost ~]# vim  abc
+
+Press i to insert text 
+
+hello India
+Hello world
+
+Press ESC key  ===> to exit from the insert mode
+
+:wq  ===> save adn quit from this file
+===================================================
+[root@localhost ~]# ls
+abc              Desktop    Downloads  Pictures  Templates  xyz
+anaconda-ks.cfg  Documents  Music      Public    Videos
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# cat abc 
+Hello India
+Hello World
+Hello java
+[root@localhost ~]# 
+[root@localhost ~]# vim  /tmp/xyz
+
+fdfsdfdsdfd
+sdfdfsdffdfdf
+:wq!
+==============================================
+File  ===> Parameter  ===> Value  ===> set 
+==============================================
+[root@localhost ~]# cat  /etc/crontab 
+==============================================
+what is commented lined and uncommented lines in linux ?
+==============================================
+[root@localhost ~]# grep   ^[#]    /etc/crontab 
+# For details see man 4 crontabs
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name  command to be executed
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# grep   ^[^#]    /etc/crontab 
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+[root@localhost ~]# 

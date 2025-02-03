@@ -1,0 +1,187 @@
+=====================================================
+
+        Day-3 Session
+
+=====================================================
+
+How we can create redhat linux lab in personal laptop ?
+
+Recommended Choice:- Virtual Machine
+
+Step-1 Download and install any Software to create virtual machine  EX:  VMware workstation/VirtualBox/UTM/VMwareFution
+
+Step-2 Download Linux Vendor ISO image 
+
+=====================================================
+Laptop/Desktop  ===> Settings  ==> BIOS settings  ==> make sure ==> Virtualization ==> Technology  ==> Enable 
+=====================================================
+Step-3 Click on VMware Icon and create your virtual machine as per required H/W configuration ==> RAM + CPU + DISK 
+
+Step-4 Click on CD/DVD icons and connect ISO image to start the OS installation and power on this machine
+
+Step-5  Select first option  ==> Install rhel 9 
+
+
+
+======>    Reboot  ==================================
+
+=====================================================
+.
+RHEL-8 and RHEL-7 and RHEL-9  Server Ready  ? ==> DONE
+
+1- we need ISO image
+
+
+CEntos-7-8-9 Installation  ==> DONE
+
+=====================================================
+
+
+How we can download Fedora linux and How we can install this ?
+
+=====================================================
+Installation Method:- 
+
+1- Fully GUI based Method
+
+2- CLI based Method
+ 
+=====================================================
+
+How we can install rhel-9 with fully CLI based Method ?
+
+
+
+step-1 create virtual machine
+step-2 connect ISO image
+step-3 power on machine ===>
+
+
+OLD Version ===>  Press ESC  key  ==> boot:linux text {Press ENTER}
+
+New version ===>          Troubleshooting  ===> select  ===> Install rhel rhel9 with text mode
+
+
+=====================================================
+
+What is the use of snapshot feature in VMware workstation  ?
+
+
+
+1- Poweroff and poweron
+
+2- Suspend and Resume
+
+3- Snapshot create and restore
+
+=====================================================
+=====================================================
+
+GUI Mode   ==> Switch  ===> CLI   ==> YES
+Again ==> CLI  ===> switch  ==> GUI  ==> YES
+
+
+====================================================
+
+only CLI Mode  ===> direct ==>command  ==> switch  ==> GUI  ==> default answer is no ==> but yes we can install required rpms for GUI mode
+
+====================================================
+
+to switch from GUI to CLI  but as a TEMP
+
+[root@localhost ~]# systemctl  isolate  multi-user.target 
+
+
+
+Login: root
+password: redhat
+
+to switch from CLI to GUI but as a TEMP method
+
+
+
+[root@localhost ~]# systemctl  isolate  graphical.target
+
+
+====================================================
+CLI Mode   <=====> multi-user.target 
+
+
+GUI Mode   <=====> Graphical.target
+
+====================================================
+
+
+
+[root@localhost ~]# systemctl get-default 
+graphical.target
+[root@localhost ~]# 
+
+====================================================
+
+
+[root@localhost ~]# systemctl set-default multi-user.target 
+[root@localhost ~]# reboot
+
+====================================================
+
+
+[root@localhost ~]# systemctl set-default graphical.target
+[root@localhost ~]# reboot
+
+
+=====================================================
+
+Types of Users ?
+
+1- Super Users
+2- Normal users
+
+
+Types of working style OR login mode 
+
+1- GUI ENV
+2- CLI ENV
+
+Types of login method
+
+1- Local to local  ===> 1- username 2-password
+
+2- Remote Login    ==>  1- username 2-password  3- targets server or machine IP address 4- remote login software [EX: putty OR others ]
+
+
+
+====================================================
+
+on RHEL-9 Machine
+
+
+  # ifconfig 
+  # nmcli  connection  down  ens160
+  # nmcli  connection  up  ens160
+  # ifconfig
+
+
+RHEL-9 VM IP address is ==> 192.168.40.128
+
+====================================================
+
+ON windows Machine
+
+
+1- Download and install putty
+2- double click   ===>  192.168.40.128
+
+Username: root
+password: redhat
+
+
+[root @localhost ~ ] # 
+
+====================================================
+
+
+
+
+
+

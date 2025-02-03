@@ -1,0 +1,752 @@
+=================================================
+             Day-4 Session
+=================================================
+
+=================================================
+
+
+
+Machine[H/W]  <===  Operating System <== Application/Tool/Utility/software
+
+=================================================
+
+
+Before doing start any work on linux ?
+
+1- Terminal OR interface OR Command prompt
+
+2- Command ==> set of pre defined code which is developed by developer
+
+3- What is IPO concept ? Input processing Output  
+
+
+
+================================================
+How we can login in this machine ?
+
+1- login with super user  in GUI Mode    ===> not listed ==> username==> root and password ==> redhat
+2- login with normal user in GUI mode    ===> username [Click] with password
+
+================================================
+
+1- Local to local method
+2- Remote Login
+
+================================================
+================================================
+
+
+Task-1  How we can login in my machine with root account in GUI mode local to local method ?
+
+Not Listed  [Click]
+
+username: root
+password: redhat
+
+Short Keys:- how we can manage the terminal window or screen using short keys
+
+How we can open terminal  ?
+
+Method:-1  Activities  ==> Terminal
+Method:-2  Alt+F2   => to get run application window  ==> gnome-terminal   ==> enter
+
+
+Alt + F10  ==> to maxmize the Terminal window size
+Alt + F5   ==> to minimize the Terminal window Size
+
+==================================================
+
+ctrl + shift  ++++   ==> to increase font size
+
+ctrl + ----          ==> to deacrese font size
+
+===============================================
+===============================================
+
+
+   
+
+Ctrl + shift + t   ==> to open sub terminal in existing terminal
+
+Ctrl Pageup/Pagedown ==> to switch between these TABs
+
+Ctrl + shift + n  ==> to open new terminal window
+
+Ctrl + d OR  #exit ==>   to logout from the current user account
+   OR
+Alt + F4  => to close all the Terminals
+
+# clear OR Ctrl + l    ==> to clear screen 
+
+Ctrl + c    ==> to close the command or to terminate the command
+
+
+=============================================
+
+Task-2
+
+
+How we can switch GUI to CLI and CLI to GUI but as a TEMP Basis ?
+
+[root@servera ~]# systemctl isolate  multi-user.target   === to switch GUI to CLI Mode 
+
+login: root
+password: redhat 
+
+[root @ localhost ~ ] #
+
+
+How we can again come back in GUI  mode
+
+
+[root@servera ~]# systemctl isolate   graphical.target   === to switch CLI to GUI Mode 
+
+not listed 
+
+username:root
+password:redhat
+
+=========================================== 
+Task-3
+
+How we can switch GUI to CLI and CLI to GUI but as a PERMANTLY ?
+
+
+[root@servera ~]# systemctl get-default 
+graphical.target
+[root@servera ~]# 
+[root@servera ~]# systemctl set-default multi-user.target 
+
+[root@servera ~]# systemctl reboot     OR  # reboot 
+
+After reboot now this machine will load with Fully CLI mode  
+
+
+
+login: root
+password: redhat 
+
+[root @ localhost ~ ] # systemctl  get-default 
+ 
+[root@servera ~]# systemctl set-default graphical.target 
+
+[root@servera ~]# systemctl get-default 
+graphical.target
+[root@servera ~]# systemctl reboot
+                 OR
+                # reboot
+
+Now this machine again come back in GUI mode  
+
+
+login: root
+password: redhat 
+======================================================
+
+GUI Mode  ==> switch  ==> CLI mode  <== GUI Mode  ==> YES
+
+only CLI mode  ==> switch ==> GUI  ==> default answer is = NO ==> but yes we can do this if we are having knowledge 
+                                                                  about rpm installation
+
+
+=====================================================
+=====================================================
+During the OS installation 
+
+1- Server with GUI        ==> with GUI + CLI mode  ===> but we have the choices 
+2- Minimal installation   ==> only CLI mode  
+
+
+linux support both types of GUI and CLI. but linux admin can decide the login mode in any machine.
+
+=====================================================DONE
+
+
+Task-4  How we can login in my machine with normal account in GUI mode local to local method ?
+
+
+
+username: student    [Note: user name can b enything ]
+password: redhat
+
+How we can logout the same machine from normal  user account.
+
+===========================================
+
+How we can switch from one user account to another user account using su command ? ==> switch user [su]
+
+
+[root@localhost ~]# su  -  rajeev  
+[rajeev@localhost ~]$ 
+[rajeev@localhost ~]$ exit
+logout
+[root@localhost ~]# 
+[root@localhost ~]# exit
+
+
+[root@localhost ~]# useradd  vinit
+[root@localhost ~]# 
+[root@localhost ~]# passwd vinit
+Changing password for user vinit.
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+[root@localhost ~]# 
+
+
+[root@localhost ~]# su -  vinit
+[vinit@localhost ~]$ 
+[vinit@localhost ~]$ exit
+logout
+[root@localhost ~]# 
+
+
+[root@localhost ~]# su -  vinit
+[vinit@localhost ~]$ 
+[vinit@localhost ~]$ 
+[vinit@localhost ~]$ 
+[vinit@localhost ~]$ su - root 
+Password: 
+[root@localhost ~]# 
+[root@localhost ~]# exit
+logout
+[vinit@localhost ~]$ exit
+logout
+[root@localhost ~]# 
+
+[root@localhost ~]# su - vinit 
+[vinit@localhost ~]$ 
+[vinit@localhost ~]$ 
+[vinit@localhost ~]$ su - 
+Password: 
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# exit
+logout
+[vinit@localhost ~]$ exit
+logout
+[root@localhost ~]# 
+
+
+What is User ID and Process ID concept  ?
+
+[root@localhost ~]# id root 
+uid=0(root) gid=0(root) groups=0(root)
+[root@localhost ~]# 
+
+
+
+Types of Users in linux ?
+
+
+1- Super user  ===> root    ===> UID  ==>  0
+
+
+2- system defined users OR application Managing users  ===> FTP,DNS,HTTP,DHCP.....nagios,zabbix......so on
+
+  UID Range  ==> 1 to  999
+
+
+3- Normal users  ===> deepak,sumit,rajeev  ===> UID range  === 1000 to 60000
+
+=====================================================
+=====================================================
+
+
+Short Keys:- how we can manage the command on the terminal screen using short keys
+
+
+[root@localhost ~]# systemctl restart crond
+
+
+ctrl + a   OR  HOME    ==> to move cursor in begining of the command
+ctrl + e   OR  END     ==> to move cursor in end of the command 
+ctrl + <=== back arrow
+ctrl + ====> forward arrow
+ctrl + u ==> delete command before the cursor
+ctrl + k ==> delete command after the cursor
+
+
+up arrow  ==> to recall any command from the history
+
+==============================================
+
+[root@serverb ~]# date 
+Sun Jan 28 10:37:51 AM IST 2024
+[root@serverb ~]# 
+[root@serverb ~]# !!    ==> just recall the last command from the history
+date 
+Sun Jan 28 10:38:00 AM IST 2024
+[root@serverb ~]# 
+[root@serverb ~]# 
+[root@serverb ~]# !41    ==> from the top
+
+[root@serverb ~]# !-41    ==> from the Bottom 
+
+
+
+============================================
+
+Ctrl + r    ==> to search and execute any command from the history
+
+============================================
+============================================
+
+
+[root@localhost ~]# userdel   vinit 
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# id vinit 
+id: ‘vinit’: no such user
+[root@localhost ~]# 
+[root@localhost ~]# su - vinit
+
+
+[root@localhost ~]# useradd rajeev
+[root@localhost ~]# passwd rajeev
+Changing password for user rajeev.
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# su - rajeev
+[rajeev@localhost ~]$ 
+[rajeev@localhost ~]$ date
+Sun Sep 29 10:22:14 AM IST 2024
+[rajeev@localhost ~]$ exit
+logout
+[root@localhost ~]# 
+
+[root@localhost ~]# userdel  rajeev 
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# id rajeev
+id: ‘rajeev’: no such user
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# su - rajeev
+su: user rajeev does not exist or the user entry does not contain all the required fields
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# useradd soniya
+[root@localhost ~]# 
+[root@localhost ~]# id soniya
+uid=1001(soniya) gid=1001(soniya) groups=1001(soniya)
+[root@localhost ~]# 
+[root@localhost ~]# userdel soniya
+[root@localhost ~]# 
+[root@localhost ~]# id soniya
+id: ‘soniya’: no such user
+[root@localhost ~]# 
+
+
+=====================================================
+=====================================================
+
+Command prompt ?
+
+
+Machine  ===> hostname [Optional]  <====> IP address [Mandatory]
+
+
+Computer  ====> OS installation  ===> localhost.localdomain  ===> yes hostname or machine name or computer name OR system name ===> 
+
+
+
+
+
+[ root @ localhost ~ ] #
+
+[ root @ usa-ftp-server ~ ]  #
+
+[ root @ dns-uk-instance ~ ] # 
+
+[ root @ max-hostpital-pc1 ~ ] #
+
+=====================================================
+
+# hostname  ===> default hostname 
+# ifconfig  ===> default automatic setup 
+
+====================================================
+
+
+[root@localhost ~]# hostname
+localhost.localdomain
+[root@localhost ~]# 
+[root@localhost ~]# hostnamectl set-hostname mypc1
+[root@localhost ~]# exit
+
+
+[root@localhost ~]# 
+
+
+[sumit@localhost ~]$
+
+
+==================================================
+Software 
+
+Windows ==> software   ===>  .exe
+Redhat  ==> Package    ===>  .rpm
+
+==================================================
+===> File Creation  ===> Content write 
+===> Folder         ===> Collection of files and sub folder
+
+==================================================
+Command line Mode 
+
+   File      <====> File
+   Folders   <====> Directory
+
+==================================================
+mkdir  ===> to create any directory with any name
+cd     ===> to enter into any directory [Change Directory]
+ls     ===> to check data listing of any directory
+cat    ===> to read the content of any file on the terminal
+touch  ===> to create blank file just for testing purpose      [gedit+VI+VIM ===> File Management]
+=================================================
+
+super user     ===> personal data  ===> Home Directory OR home account
+normal user    ===> Personal data  ===> Home Directory OR home account
+
+=================================================
+
+
+[ root @ localhost ~ ] #
+
+
+
+[sumit @ localhost ~ ] #
+
+
+================================================
+
+pwd  ===> to print complete location of the current working directory   OR Present working directory [Location]
+
+================================================
+
+How Data store in windows ?
+
+Machine ===> DISK ===> Partitions ===> store  ===> data ===> files and folders
+
+C:\     ===> is a mandatory Drive to store data
+
+Types of Data ?
+
+1- Dafault data ==> OS defined data OR application defined OR services defined data  OR OS controlling data OR application Controlling data
+
+2- Custom data  ===> User defined data   ===> always created by any users
+
+================================================
+
+1- default data  ==> 1- during the OS installation   2- After the OS installaton if we will install any required application
+
+2- Custom data  ===> After the OS installation 
+
+
+
+C:\     ===> is a mandatory Drive to store data   ===> 1- default data   2- custom data
+
+But it is not a recommended practise in windows
+
+
+
+C:\   =====> OS controlling data and Application controlling data
+
+D:  E:   F:    =====> Optional  Drive    ===> always used to store personal data
+
+================================================
+
+
+How data store in Linux  ?  ==> My Computer ====> There is no conept of C D E F Drive
+
+
+Types of data ?
+
+
+1- default data
+2- Custom data
+
+
+DISK  ===> Partition  ==> Cut  ===> save  ===> data ===> store
+
+
+In linux we have single parent directory to store to complete linux OS data which is called  /
+
+/  ===> Parent Directory  OR Parent Partition OR ROOT partition 
+
+
+/  ====> 1- Default data    2- Custom data
+
+
+
+# ls  /   =====>   Default data OR default directory    ===> OS Controlling Directory  OR System Managing Directory
+
+
+around 20 directory  ===> Display  ===> default directory  ===> 
+
+
+# mkdir /java
+
+# ls  /    ===> default data + 1 custom directory
+
+
+around 21 directory
+
+# mkdir  /java/php
+
+# ls  /java
+
+php 
+
+# touch  /java/abc
+
+
+# ls  /
+
+# ls /java
+
+
+php   abc  
+
+
+# cat   /java/abc
+
+Blank  
+
+
+~ ]  # cd  /java/php
+
+php] #   pwd
+
+
+/java/php
+
+php ] # cd  ..
+
+java ] # pwd
+
+        /java
+
+java ] # cd  ..
+
+/    ]  # cd  ..
+
+/    ]  # pwd
+
+          /
+
+================================================
+
+/    ===> default data  + Custom data
+
+===============================================
+
+[ root @ loacalhost ~ ] # pwd
+
+                   /root
+
+
+[ root @ localhost ~ ] # ls 
+
+[ root @ localhost ~ ] # ls  /       =======> linux complete data ===>  1-  /root     2-  /home
+
+[ root @ localhost ~ ] # ls  /home
+
+=============================================
+/         ====> it is parent directory of linux based operating system which contains complete linux machine data.
+/root     ====> it is a home directory of super user OR root's home directory
+root      ====> it is a super user user name
+=============================================
+
+[ root @ localhost ~ ] # pwd   ===>  /root 
+
+
+
+
+[ root @ localhost ~ ] # ls 
+[ root @ localhost ~ ] # ls /root
+[ root @ localhost ~ ] # ls  ~
+
+
+[ root @ localhost ~ ] # ls  /
+[ root @ localhost ~ ] # ls  /home
+
+===========================================
+
+Rule-1
+Rule-2
+Rule-3
+
+============================================
+
+
+/
+
+/root
+
+/home
+
+
+=============================================
+/home
+
+/home/sachin  OR  ~
+
+sachin
+
+============================================
+/    
+
+/root  OR   ~
+
+root
+
+===========================================
+
+
+root     ===> /  ==> root       ===> /root
+sachin   ===> /  ==> sachin     ===>  home   ===> sachin   ===>  /home/sachin 
+
+==========================================
+
+~ ] # ls 
+
+~ ] # ls /
+
+~ ] # ls /home/sachin
+
+=========================================
+
+Data Creation Place  ?
+
+1- Private Place OR home directory 
+
+2- Public Place  OR Out side of the home directory
+
+
+=========================================
+
+super user    ===> data create  ===> home account ===>   /root 
+normal user   ===> data create  ===> home account ===>   /home/soniya
+
+========================================
+
+Super user   ===> Private Place  [YES]          +          Public place   [YES]
+Normal user  ===> Private place  [YES]          +          Public Place [NO]===> Configurable  ==> Current Permissions
+
+========================================
+Example of home directory
+
+[root @ localhost ~ ] #  mkdir  java 
+[root @ localhost ~ ] #  mkdir  /root/java
+[root @ localhost ~ ] #  mkdir  ~/java
+
+
+[root @ localhost ~ ] #  mkdir  /java   ===> Example of public directory OR out side of the home
+
+========================================
+
+[soniya @ localhost ~ ] $ ls  /root/java   ===> permission denied
+
+[soniya @ localhost ~ ] $ ls  /java ==> this command will execute cos we have read only permission 
+
+[soniya @ localhost ~ ] $ mkdir  java
+[soniya @ localhost ~ ] $ mkdir  /home/soniya/java
+[soniya @ localhost ~ ] $ mkdir  ~/java
+
+=========================================
+
+[deepak @ localhost ~ ] $ ls  /root/java             ===> NO
+[deepak @ localhost ~ ] $ mkdir  /home/soniya/java   ===> NO
+[deepak @ localhost ~ ] $ mkdir  /home/deepak/java   ===> YES
+
+========================================
+
+
+[root@mypc1 ~]# ls
+anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@mypc1 ~]# 
+[root@mypc1 ~]# ls  ~
+anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@mypc1 ~]# 
+[root@mypc1 ~]# ls /root 
+anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@mypc1 ~]# 
+[root@mypc1 ~]# 
+
+
+[root@mypc1 ~]# ls
+anaconda-ks.cfg  Documents  Music     Public     Videos
+Desktop          Downloads  Pictures  Templates
+[root@mypc1 ~]# 
+[root@mypc1 ~]# 
+[root@mypc1 ~]# ls  /
+afs  boot  etc   lib    media  opt   root  sbin  sys  usr
+bin  dev   home  lib64  mnt    proc  run   srv   tmp  var
+[root@mypc1 ~]# 
+[root@mypc1 ~]# 
+[root@mypc1 ~]# ls  /root
+anaconda-ks.cfg  Documents  Music     Public     Videos
+Desktop          Downloads  Pictures  Templates
+[root@mypc1 ~]# 
+[root@mypc1 ~]# ls
+anaconda-ks.cfg  Documents  Music     Public     Videos
+Desktop          Downloads  Pictures  Templates
+[root@mypc1 ~]# 
+
+
+
+ 
+
+
+[root@mypc1 ~]# su - student 
+[student@mypc1 ~]$ pwd
+/home/student
+[student@mypc1 ~]$ ls 
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[student@mypc1 ~]$ 
+[student@mypc1 ~]$ ls ~
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[student@mypc1 ~]$ 
+[student@mypc1 ~]$ ls /home/student
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[student@mypc1 ~]$ 
+[student@mypc1 ~]$ ls /root
+ls: cannot open directory '/root': Permission denied
+[student@mypc1 ~]$ ls /
+afs  boot  etc   lib    media  opt   root  sbin  sys  usr
+bin  dev   home  lib64  mnt    proc  run   srv   tmp  var
+[student@mypc1 ~]$ 
+[student@mypc1 ~]$ ls /home
+rajeev  soniya  student  vinit
+[student@mypc1 ~]$ 
+[student@mypc1 ~]$ ls /home/vinit
+ls: cannot open directory '/home/vinit': Permission denied
+[student@mypc1 ~]$ 
+[student@mypc1 ~]$ ls /home/student
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[student@mypc1 ~]$ 
+[student@mypc1 ~]$ 
+[student@mypc1 ~]$ ls /
+afs  boot  etc   lib    media  opt   root  sbin  sys  usr
+bin  dev   home  lib64  mnt    proc  run   srv   tmp  var
+[student@mypc1 ~]$ 
+[student@mypc1 ~]$ ls /home
+rajeev  soniya  student  vinit
+[student@mypc1 ~]$ 
+[student@mypc1 ~]$ ls /home/vinit
+ls: cannot open directory '/home/vinit': Permission denied
+[student@mypc1 ~]$ 
+[student@mypc1 ~]$ exit
+logout
+[root@mypc1 ~]# 
+
+=========================================================
+1- Data Creation Planning ===> Windows and linux  ==> data store
+2- Data Creation 

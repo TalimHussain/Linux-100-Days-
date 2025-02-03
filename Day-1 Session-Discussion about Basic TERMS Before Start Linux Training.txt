@@ -1,0 +1,352 @@
+======================================================
+           Day-1 Session
+======================================================
+     RedHat Linux Training
+           OR
+      Linux Training
+           OR
+   RedHat Certified System administrator [RHCSA]
+
+======================================================
+
+We are going to start work with IT based ORG/IT infra/IT based ENV
+
+======================================================
+user1   ===> user2
+user2   ===> user1 
+
+
+Communication device  ===> mobile [H/W device]
+
+
+ 
+Device [H/W] <====    Operating System    <=====   Application/utility/Software/Tools/Services
+
+======================================================
+Types of vendor ?
+
+1- H/W Vendor
+2- Operating system providing Vendor
+3- Application providing Vendor
+
+======================================================
+
+Computer System OR Machine   [H/W] ===> set of devices  ===> complete system  ==> ready to use  ===> machine
+
+keyboard + Mouse  + monitor + motherboard + set of device [RAM+CPU+DISK+NIC]
+
+
+Blank Machine ===> Desktop/laptop/Towermachine/Rackmounted  ===> H/W  <==== Operating system   <=== Application/Tools/Software
+
+======================================================
+
+======================================================
+
+1- machine [h/W]     ==> DELL/HP/LENOVO
+
+
+2- operating system  
+
+
+3- Application/Softwares/Tools/Utiltiy/Services
+
+
+=====================================================
+
+An operating system is system software that manages computer hardware and software resources, 
+and provides common services for computer programs
+
+=====================================================
+
+what is application/software/Tools  ?
+
+
+Application software refers to software that performs specific functions for a user
+
+=====================================================
+
+Developer ===>
+
+
+Tester OR Testing Department
+
+
+Administrator OR admin OR infra Engineer
+
+
+====================================================
+language
+
+Programming language   ==> C  C++ Java Python PHP  ===> 
+
+Application/Operating system  ==> backend Code ==> Design  ==> Programming Lang
+
+====================================================
+
+Types of Software 
+
+1- System Software
+
+2- Application Software
+
+==================================================== Complete===> Operating system
+machine [H/W]  <=== Operating system  <== Application/Softwares
+=====================================================
+
+ABC person  ==> XYZ Company ==> n number of projects/Client/Customer ===> demand ===> HR  ==> Resource ===> skills ==> Role
+
+n nunber of resources ===> project  ==> handle
+
+
+1- Network admin
+2- Windows admin
+3- database admin
+4- firewall admin
+5- monitoring team
+.............role  ==>project ===> ZERO  ====> END
+
+
+=====================================================
+Types of project ?
+
+1- Internal Project/Work
+2- External Project
+=====================================================
+1- Off Role
+2- ON Role
+
+=====================================================
+H/W   <=== OS    <=== Appliacation
+
+Project Planning  ?
+
+
+1- Application Planning                 ===> MS-office
+
+2- Operating system planning            ===> Windows/Other Vendors/Linux based operating system
+
+3- Machine Planning OR H/W planning     ===> Required H/W planning
+
+   Types of machine ?
+
+
+  1- Physical Machine  ===> laptop/Desktop/Towermachine/Rackmounted 
+  2- Virtual Machine using any available software in market
+  3- Cloud based machine   ====> EX:  AWS Cloud  + Google Cloud   + Azure Cloud
+=====================================================
+
+Types of Vendor ?
+
+1- H/W    OR Cloud based vendor
+2- OS
+3- Application
+
+====================================================
+ISP  ===>
+CSP  ===> Cloud Service Providers
+====================================================
+
+
+Types of Login ?
+
+1- Local to local Login Method
+
+2- Remote login method
+
+====================================================
+Project/Client/Customer  ===> Machine
+
+1- Physical infra
+2- Virtual indra
+3- Cloud based infra
+
+====================================================
+Windows ===> Operating System  ==> microsoft
+
+Course  ==> windows admin  ==> MCSA
+
+====================================================
+Linux based ===> operating system  ===> Linux ==> Training ===> OS + Application  ==> task 
+
+Ticket tools ==> Close 
+
+====================================================
+Machine      <==== OS    <=== Application
+               Windows/Unix/linux 
+====================================================
+Project  ==> linux based operating system  ===> Application ==> manage/Controll  ==> Human ==> admin OR linux admin OR infra enginner
+====================================================
+unix/linux admin Required
+====================================================
+
+Vendor ?
+
+Flavor ?
+====================================================
+Mobile ?
+
+Mobile vendor OR Distributors ?   ===> NOKIA   VIVO   OPPO ...... ===> OS   ==> Application 
+
+Nokia Mobile
+samsung mobile
+Apple mobile
+OPPO Mobile
+
+====================================================
+SCMA ===> course design ==> Training  + Exam ==> clear  ==> certificate ==> SCMA
+====================================================
+
+Unix Training ===> Unix based Flavors
+
+Linux Training  ===> Linux Flvors
+
+Redhat ===>  Linux  ===> RHEL  ==> version  ==> Latest ==> RHEL-9   ==> RHCSA Training and RHCSA certification 
+
+ubuntu Linux
+
+CentOS linux
+
+kali Linux 
+
+Suse Linux
+............so  on 
+
+
+
+====================================================
+Difference between Redhat and Redhat linux and Linux ?
+====================================================
+RHEL ===> version  ===> RHEL-9
+====================================================
+Unix  ===> Flavors  ===>
+Linux ===> falvors  ===> project  ==> need  ==> OS vendor  ==> select  ==> Download ==> Install ===> Login  ==>  Task perform
+====================================================
+Linux  ==> vendor  ==> trainng + certification  ==> Redhat  ==> RHCSA
+====================================================
+Vendor     ===> Linux  ==> Redhat  ==> RHEL
+
+
+1- Product           ===> Operating system ==> RHEL
+2- Training          ===> First Layer ==> RHCSA  ==> collection of topics
+3- Certification     
+
+====================================================
+linux Trainig
+
+Redhat 
+
+Redhat Linux 
+
+Redhat linux  ==> RHEL
+
+Latest version ===> RHEL-9
+
+====================================================
+
+RHCSA  
+
+Types of certificate ?
+
+1- Training center 
+2- Global vendor Certification  ===> RHCSA  OR EX200
+
+===================================================
+
+Redhat linux  ==> RHCSA  ==> set of topics  ==> Two Parts 
+
+==> 1 First Book     [Chapters]   OR  SA-1   ==> basic Linux
+==> 2- Second Book   [Chapters]   OR  SA-2   ==> advance linux
+
+===================================================
+Machine   <==== Operating system         <=== APPLICATION
+                Unix/Linux/Windows/MAC
+
+===================================================
+
+Types of APPLICATION Vendor  ?
+
+1- OS Vendor based application 
+
+2- Third party Application 
+
+3- Inhouse applications which is developed by our inhouse developers
+     
+===================================================
+
+Operating System Training 
+
+Application Training/Tool/Services/utility Training  ===> move on
+ 
+===================================================
+
+Shop ===> order ==> H/W
+
+
+Machine with out pre installed OS ===> we can install the OS as per my needs
+
+machine with Pre Installed OS ==> Windows/Ubuntu/Dos  ===> we can change this pre installed OS if we want.
+
+Laptop ==> DELL HP  ===> Windows
+
+===================================================
+laptop/Desktop/Tower/Rackmounted [H/W]  <=== 
+
+1- H/W shop            ===>  Dell.com         ===> Order  ==> online  OR offline  ===> We need to pay for this  OR Cloud based machine
+2- OS shop             ===>  www.redhat.com   ===> OS Installation IMAGE  ==> 1- Physical machine  2- Virtual  3- Clouse based setup 
+3- Application shop    ===>  www.nagios.org   ===> Application installation setup files ===> 1- physical 2- Virtual 3- Cloud 
+
+===================================================
+Training  ==> Laptop/Desktop 
+===================================================
+
+OS vendor  ==> website ===> download  ===> link ==> IMAGE ===> Download  
+application  Vendor  ==> website  ==> download  ==> installation ==> Use
+
+==================================================
+What is IPO Concept  ?
+
+Input processing Output
+
+
+# useradd sumit  ===> command will perform thier function
+
+==================================================Local to Local and Remote Login
+==================================================
+
+Copyrights ?
+
+Application Dependent and Applicaion Indepdendent
+
+Open Source ?  OR COPY LEFT
+
+Portable  and Non Portable ?
+
+=================================================
+
+Unix ?
+
+Unix Flavors  
+
+IBM  ===> AIX
+SUN  ==> SOLARIS
+HP   ==> HP-UX
+
+================================================= Oracle India ===> Oracle linux 
+=================================================
+around 1980 ===> Free Software Software
+=================================================
+1-APP
+2-OS
+3-MACHINE
+=================================================
+Unix history ?
+Minix history ?
+Linux History ?
+=================================================
+
+
+
+
+
+
+

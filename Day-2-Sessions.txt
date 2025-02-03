@@ -1,0 +1,299 @@
+==============================================
+      Day-2 Session
+==============================================
+
+1- What is Computer/machine/Desktop/laptop/Towermachine/Rackmounted/IT Datacenter ?
+2- What is Operating System ?
+3- What is application/Software/Tools/Utility/Services ?
+4- What Language and Programming language ?
+5- Who is developer/administrator/tester ?
+6- What is meaning of vendor and Flavors ?
+7- Types of vendors ===> 1- H/W  2- OS vendor  3- application 
+8- what is project/Client/Customer?
+9- Who is linux admin/administrator/infra Engineer ?
+10- types of internal project/External Projects ?
+11- what is the meaning of off role and on role jobs ?
+12- Project Deployment  ==> Pre Sales Team ==> Customer demand  ==> understand  ==> techinal team ==> Deployment Planning start
+12- project planning ==> 1- Application Planning  2- OS planning  3- H/W Planning OR Cloud Based Planning [ Choice-1 AWS  2- Google 3- Azure ]
+13- Project ===> 1- H/W OR cloud Choices   2- OS choice    3- APPLICATION Choices
+==============================================
+1-Machine [H/W] OR Instance ===> 1- Physical 2- Virtual   3- Cloud  based 
+2-Operating System ===> windows/linux/unix/apple
+3-Applications     
+==============================================
+
+14-  what is Unix and Flavor of Unix ?
+15-  What is Minix ?
+16-  what is linux and flavor of linux ?
+
+=============================================
+
+Machine [H/W]  <=== Operating system    <== Application
+                   Linuxbased [Redhat]
+=============================================
+Operating System ?
+
+Linux <== Database Admin
+=============================================
+
+ABC user  ==> XYZ Company  ==> inhouse application and External project ==> Profiles ==> HR ==> Requirement  ==> Profile select ==> Project ==> appoint  ===> Role ==> shift  ==> Task ==> as per Rights ==>  perform  ==> Exit 
+
+
+Difference between Course and Profile ?
+
+=============================================Redhat Linux Training 
+
+1 ==>  Multiusers
+
+2 ==>  Multiprocessing
+
+3 ==>  Multitasking
+
+============================================
+1- Machine/basemachine
+2- Workstation/PC
+3- Server machine 
+4- Client Machine
+============================================
+
+
+1- H/W provider
+2- OS provider            ===> RedHat Linux  ==> latest Version ==> RHEL  ==> RHEL-9
+3- Application provider
+
+
+============================================
+
+How we can create Redhat Linux Lab on my personal laptop/Desktop ?
+
+Difference between OS installation image and Applications  ?
+
+
+
+Windows       ==> software                       ===> developer ==> extention   ===>  .exe   OR SETUP file
+Redhat Linux  ==> Softwrae/Application/Packages  ===> developer ===> extention  ===>  .rpm OR redhat package manager
+
+===========================================
+Example:-
+
+Anydesk application download for windows OS    ===>  .exe
+Anydesk application download for Redhat linux  ===>  .rpm
+
+===========================================
+
+What is Terminal OR Command Prompt  ?
+
+What is Command ? ==> set of code ==> setup   OR role  ==> define
+
+# tree   ===> Tree Command not found
+# tree   ===> Permission denied
+# reboot
+# useradd sumit
+# userdel sumit
+
+
+Command  ==> set of code OR role  ==> Terminal  ==> Command type ==> Enter  ==> Input  ==> processing ===> Output
+
+
+
+
+===========================================
+RPM installation 
+
+1- During the OS installatoion time  
+2- After the OS Installation we can install required rpms
+
+===========================================
+.exe    ==> windows  ==> supported extention  ==> application
+.rpm    ==> redhat   ==> supported extention  ==> application
+.iso    ==> Vendor ==> Complete OS installation image  ==> OS booting File + set of RPMs
+
+===========================================
+H/W  ==> System  OR Cloud based machine
+
+OS vendor  ==> iso image OR os installation image  OR OS Booting Image  ===> .iso file
+
+
+Application  ===> OS  ==> repective  ===> 
+windows ==> .exe
+redhat  ==> .rpm
+
+===========================================
+Redhat ISO image ===> Folders   ==> number of rpms ===>  around 6500 rpms  + addon  [www.redhat.com]
+
+
+1- During the os installation  ==> using the ISO image ==> Choice-1 Minimal Installation [only you will CLI mode ]   Choice-2 Server with GUI
+
+2- After the OS installation   ==> 
+
+===========================================
+
+ISO image  ==> around 6500 rpms available
+
+
+1- During the OS installation
+
+         Choice-1 Minimal INstallation ===> only CLI Mode   ===> around  400 Package Installation [leight weight machine]
+         Choice-2 Server with GUI      ===> GUI + CLI mode  ===> around 1100 Package installation [heavy machine]
+
+2- After the OS installatoion ==> as per my project need
+
+===========================================
+Types of Login Method ?
+
+1- Local to Local   ===> Username + password
+2- Remote Login     ===> Username + password + IP address of your Remote Server + Remote Login software EX: Putty
+
+===========================================
+Types of working Mode OR loing Mode  ?
+
+1- GUI mode  [ graphical user Interface ] ===> Terminal open
+
+2- CLI mode  [ Command line interface ]
+
+
+linux Operating system supoort both login ENV ==> 1- GUI   2- CLI but  linux admin will decide what type of login ENV 
+
+
+
+Login ENV can be change after the OS installation if we have knowledge about the RPM management and about env management command.
+
+
+===========================================
+Types of Users in Linux  ?
+
+1- Super User    ===> root               ===> Full rights                                         ===> Terminal ===> #
+2- Normal user   ===> sumit deepak alok  ===> limited Rights but we change as per my project need ===> Terminal ===> $
+
+===========================================
+
+What is the concept of SUDO user in linux ?
+
+===========================================
+Before OS installation Planning
+===========================================
+Step-1 How we can dowload linux flavors ISO image from the direct vendor websites ?
+
+
+Requirement:-
+
+1- Redhat and SUSE Linux  ==> we need to create username and password on vendor website to download Application and ISO image ?
+2- There is no need to create username and password on vendor websites.
+
+
+============================================
+What is RHN account OR Redhat login ID  ?
+============================================
+
+Choice-1   We can install OS directly on any physical machine.
+
+
+Choice-2   We can create Dual Booting ENV if we want.
+
+Choice-3   we can create Virtual Machine using any XYZ software available in market just to create virtual machine on any physical H/W
+
+Choice-4   we can create Virtual Machine on any ready to use public cloud platforms. EX: AWS + Google + Azure and other as well.
+
+============================================
+Recommended ==> as a student  ===>with  choice-3 ==> LAB Create
+============================================
+
+EX:- VMware workstation, Virtaul BOX
+
+Highly Recommned
+============================================
+
+Machine  [H/W]   <=== OS    using ISO image  <=== Applications
+
+===========================================
+
+Machine  <== Login  <=== work <=== performs  <=== Physical Virtual cloud  ===> # useradd deepak
+
+===========================================
+LAB Creation Steps 
+
+1- we need only ISO image
+2- we need one additional softwrae to create Virtual Machine. ===> cos we are going to create lab with Vitual machine concept
+                   VMware workstation software + Virtual BOX and Other as well 
+
+==========================================
+Downlaod ISO image from the internet ?
+how we can download VirtualBOX OR Vmware workstation ?  ===> Download  ===> Installation 
+
+
+VMware workstation  ==> 
+
+==========================================
+Step-1  download ISO image
+Step-2 download VMware workstation and installation
+Step-3 now click on VMware icon to create Virtaul Machine
+Step-4 Connect this RHEL-9 ISO image to start the OS installation 
+
+Reboot ===> login ===> Training  2GB ==> RAM + 1 VCPU  + DISk  ==> 25 GB OR 30 GB disk ==> Course practise
+
+==========================================
+
+Installation method ?
+
+
+1- Flopp/CD/DVD/Pendrive Bootable 
+2- using direct ISO image  ===> Virtual Machine
+3- Network based Installation Method               ===> PXE Boot Installation/Kickstart installation/Network based installation server
+
+==========================================
+
+
+
+pendrive  ===> data  + Bootable 
+
+How we can craete Bootable Pendrive ?
+
+
+Fedroa Media Writter/Other software
+
+=========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

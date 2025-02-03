@@ -1,0 +1,1365 @@
+==========================================================
+                    Day-5 Session
+==========================================================
+
+
+
+Machine [H/W]  <=== Operating System  <=== Application/Software/Services/Tools
+
+
+==========================================================
+
+Types of Users in Linux  ?
+
+1- Super User   ==>  root              ===> Terminal OR command Prompt ===> #
+2- Normal User  ==>  amit deepak sumit ===> Terminal OR command Prompt ===> $
+
+==========================================================
+what is user  ?
+what is group ?
+
+
+Permissions Apply ===>1- for any user   2- for any group members
+
+Errors ?
+
+1- Command not found
+2- Syntax Error 
+3- Permissions Denied   ====> on any commands  and on any files and directory [Data]
+
+
+1- Command controlling permissions
+2- Data controlling permissions
+ 
+What is IPO Concept  ?
+
+Input Processing Output 
+
+
+User ==> login ===> #  and $   ==> command type ==> Enter ===> machine ==> input ===> Before prossing ==> current permission ===> all things are okay  ==> processing ===> Exectution ===> screen ===> Output
+ 
+==========================================================
+
+1- default permissions
+2- Custom permissions  
+
+==========================================================
+Permission Change OR apply OR remove  ===> 1- Commands   2- Data
+==========================================================
+Network Management ==> Firewall Security  ===> Machine-1 ===> Servics
+
+machine-2   ===> Requect ===> Accept /Reject
+
+
+Traffic management
+
+==========================================================
+Permission management  ===> login  ===> root ===> 1- Complete data access 2- complete Access
+==========================================================
+  File    <====> File
+  Folder  <====> Directory
+==========================================================
+In linux we have single parent directory which is called  ===>  /
+==========================================================
+/ ====> 1- default data   2- custom data
+==========================================================
+
+[root @ localhost ~ ] # pwd
+
+                       /root
+
+
+[soniya @ localhost ~]$ pwd
+
+                     /home/soniya
+
+==========================================================
+
+/ ====> 1- root    2- home  ===> User's home account managing directory
+  ====> Except of these two directory will called OS managing directory
+
+==========================================================
+
+users  ==> root and normal user   ==> 1- inside of home account [private place]  2- outside of the home account [public]
+
+==========================================================
+==========================================================
+
+root ==>
+
+[root @ localhost  ~ ] # ls     ====> /   ===> root
+[soniya @ localhost ~] $ ls     ====> /   ===> home  ===> soniya  ===> 
+[deepak @ localhost ~] $ ls     ====> /   ===> home  ===> deepak  ===> 
+
+==========================================================
+Rule-1
+Rule-2
+Rule-3
+==========================================================
+[root@localhost ~]# ls
+anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@localhost ~]# 
+[root@localhost ~]# ls ~
+anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@localhost ~]# 
+[root@localhost ~]# ls  /root
+anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@localhost ~]# 
+[root@localhost ~]# pwd
+/root
+[root@localhost ~]# 
+[root@localhost ~]# ls /root
+anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@localhost ~]# 
+==========================================================
+
+[root@localhost ~]# useradd sumit 
+[root@localhost ~]# 
+[root@localhost ~]# ls /home
+student  sumit
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# su - sumit
+[sumit@localhost ~]$ ls
+[sumit@localhost ~]$ 
+[sumit@localhost ~]$ 
+[sumit@localhost ~]$ exit
+logout
+[root@localhost ~]# 
+
+[root@localhost ~]# passwd sumit
+Changing password for user sumit.
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+[root@localhost ~]# 
+
+
+===========================================================
+touch  ====> just to create blank file  
+mkdir  ====> to create any directory
+ls     ====> to check data listing ==> files and folder both
+cd     ====> to change directory
+===========================================================
+Practical Session
+===========================================================
+
+[root@localhost ~]# 
+[root@localhost ~]# touch abc
+[root@localhost ~]# 
+[root@localhost ~]# touch /abc
+[root@localhost ~]# 
+[root@localhost ~]# touch /tmp/abc
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc  anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@localhost ~]# 
+[root@localhost ~]# ls /
+abc  bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+afs  boot  etc  lib   media  opt  root  sbin  sys  usr
+[root@localhost ~]# 
+[root@localhost ~]# ls  /tmp
+abc
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-bluetooth.service-U7YlOQ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-colord.service-5QE1YJ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-dbus-broker.service-R2sXOd
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-fwupd.service-6SJn8t
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-ModemManager.service-NGlccX
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-power-profiles-daemon.service-HlHOSP
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-rtkit-daemon.service-fCp6tC
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-switcheroo-control.service-0L1YBw
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-systemd-logind.service-8RfaH1
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-upower.service-Gs25i3
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc  anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@localhost ~]# 
+[root@localhost ~]# ls  ~
+abc  anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@localhost ~]# 
+[root@localhost ~]# ls /root
+abc  anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@localhost ~]# 
+[root@localhost ~]# 
+
+
+[root@localhost ~]# touch abc1  /root/abc2   ~/abc3
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc   abc2  anaconda-ks.cfg  Documents  Music     Public     Videos
+abc1  abc3  Desktop          Downloads  Pictures  Templates
+[root@localhost ~]# 
+[root@localhost ~]# touch abc4 abc5 abc6
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc   abc2  abc4  abc6             Desktop    Downloads  Pictures  Templates
+abc1  abc3  abc5  anaconda-ks.cfg  Documents  Music      Public    Videos
+[root@localhost ~]# 
+
+[root@localhost ~]# 
+[root@localhost ~]# touch xyz  /xyz   /tmp/xyz 
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc   abc2  abc4  abc6             Desktop    Downloads  Pictures  Templates  xyz
+abc1  abc3  abc5  anaconda-ks.cfg  Documents  Music      Public    Videos
+[root@localhost ~]# 
+[root@localhost ~]# ls /
+abc  bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+afs  boot  etc  lib   media  opt  root  sbin  sys  usr  xyz
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# ls /tmp
+abc
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-bluetooth.service-U7YlOQ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-colord.service-5QE1YJ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-dbus-broker.service-R2sXOd
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-fwupd.service-6SJn8t
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-ModemManager.service-NGlccX
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-power-profiles-daemon.service-HlHOSP
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-rtkit-daemon.service-fCp6tC
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-switcheroo-control.service-0L1YBw
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-systemd-logind.service-8RfaH1
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-upower.service-Gs25i3
+xyz
+[root@localhost ~]# 
+
+[root@localhost ~]# 
+[root@localhost ~]# cd /
+[root@localhost /]# pwd
+/
+[root@localhost /]# ls
+abc  bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+afs  boot  etc  lib   media  opt  root  sbin  sys  usr  xyz
+[root@localhost /]# 
+[root@localhost /]# ls /root
+abc   abc2  abc4  abc6             Desktop    Downloads  Pictures  Templates  xyz
+abc1  abc3  abc5  anaconda-ks.cfg  Documents  Music      Public    Videos
+[root@localhost /]# 
+[root@localhost /]# ls /tmp
+abc
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-bluetooth.service-U7YlOQ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-colord.service-5QE1YJ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-dbus-broker.service-R2sXOd
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-fwupd.service-6SJn8t
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-ModemManager.service-NGlccX
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-power-profiles-daemon.service-HlHOSP
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-rtkit-daemon.service-fCp6tC
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-switcheroo-control.service-0L1YBw
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-systemd-logind.service-8RfaH1
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-upower.service-Gs25i3
+xyz
+[root@localhost /]# cd
+
+[root@localhost ~]# cd
+[root@localhost ~]# cd /tmp
+[root@localhost tmp]# 
+[root@localhost tmp]# pwd
+/tmp
+[root@localhost tmp]# ls
+abc
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-bluetooth.service-U7YlOQ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-colord.service-5QE1YJ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-dbus-broker.service-R2sXOd
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-fwupd.service-6SJn8t
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-ModemManager.service-NGlccX
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-power-profiles-daemon.service-HlHOSP
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-rtkit-daemon.service-fCp6tC
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-switcheroo-control.service-0L1YBw
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-systemd-logind.service-8RfaH1
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-upower.service-Gs25i3
+xyz
+[root@localhost tmp]# ls  ~
+abc   abc2  abc4  abc6             Desktop    Downloads  Pictures  Templates  xyz
+abc1  abc3  abc5  anaconda-ks.cfg  Documents  Music      Public    Videos
+[root@localhost tmp]# 
+[root@localhost tmp]# 
+[root@localhost tmp]# ls /root
+abc   abc2  abc4  abc6             Desktop    Downloads  Pictures  Templates  xyz
+abc1  abc3  abc5  anaconda-ks.cfg  Documents  Music      Public    Videos
+[root@localhost tmp]# 
+[root@localhost tmp]# 
+[root@localhost tmp]# 
+[root@localhost tmp]# ls  /
+abc  bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+afs  boot  etc  lib   media  opt  root  sbin  sys  usr  xyz
+[root@localhost tmp]# 
+[root@localhost tmp]# cd  ..
+[root@localhost /]# 
+[root@localhost /]# pwd
+/
+[root@localhost /]# cd  ..
+[root@localhost /]# 
+[root@localhost /]# cd  ..
+[root@localhost /]# 
+[root@localhost /]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd /
+[root@localhost /]# 
+[root@localhost /]# 
+[root@localhost /]# cd /root
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# cd /
+[root@localhost /]# 
+[root@localhost /]# cd 
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# cd /
+[root@localhost /]# 
+[root@localhost /]# cd  ~
+[root@localhost ~]# 
+[root@localhost ~]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd ~
+[root@localhost ~]# 
+[root@localhost ~]# cd /root
+[root@localhost ~]# 
+
+[root@localhost ~]# cd /tmp
+[root@localhost tmp]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd /tmp
+[root@localhost tmp]# 
+[root@localhost tmp]# cd ~
+[root@localhost ~]# 
+[root@localhost ~]# cd /tmp
+[root@localhost tmp]# 
+[root@localhost tmp]# cd /root
+[root@localhost ~]# 
+[root@localhost ~]# cd  /
+[root@localhost /]# 
+[root@localhost /]# cd ..
+[root@localhost /]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd ..
+[root@localhost /]# 
+[root@localhost /]# cd ..
+[root@localhost /]# cd
+[root@localhost ~]# 
+[root@localhost ~]# 
+
+[root@localhost ~]# 
+[root@localhost ~]# su - sumit
+[sumit@localhost ~]$ 
+[sumit@localhost ~]$ pwd
+/home/sumit
+[sumit@localhost ~]$ ls /home
+student  sumit
+[sumit@localhost ~]$ 
+[sumit@localhost ~]$ ls /home/sumit
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[sumit@localhost ~]$ 
+[sumit@localhost ~]$ ls /home/student
+ls: cannot open directory '/home/student': Permission denied
+[sumit@localhost ~]$ 
+[sumit@localhost ~]$ ls /root
+ls: cannot open directory '/root': Permission denied
+[sumit@localhost ~]$ 
+[sumit@localhost ~]$ ls  /
+abc  bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+afs  boot  etc  lib   media  opt  root  sbin  sys  usr  xyz
+[sumit@localhost ~]$ 
+[sumit@localhost ~]$ cat  /xyz 
+[sumit@localhost ~]$ 
+[sumit@localhost ~]$ touch  /myfile
+touch: cannot touch '/myfile': Permission denied
+[sumit@localhost ~]$ 
+[sumit@localhost ~]$ touch  /tmp/myfile
+[sumit@localhost ~]$ 
+[sumit@localhost ~]$ exit
+logout
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# useradd soniya 
+[root@localhost ~]# 
+[root@localhost ~]# su - soniya 
+[soniya@localhost ~]$ 
+[root@localhost ~]# su - soniya 
+[soniya@localhost ~]$ pwd
+/home/soniya
+[soniya@localhost ~]$ 
+[soniya@localhost ~]$ ls 
+[soniya@localhost ~]$ ls ~
+[soniya@localhost ~]$ ls /home/soniya
+[soniya@localhost ~]$ 
+[soniya@localhost ~]$ ls /root
+ls: cannot open directory '/root': Permission denied
+[soniya@localhost ~]$ 
+[soniya@localhost ~]$ ls /home/sumit
+ls: cannot open directory '/home/sumit': Permission denied
+[soniya@localhost ~]$ 
+[soniya@localhost ~]$ ls /
+abc  bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+afs  boot  etc  lib   media  opt  root  sbin  sys  usr  xyz
+[soniya@localhost ~]$ 
+[soniya@localhost ~]$ ls /tmp
+abc
+myfile
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-bluetooth.service-U7YlOQ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-colord.service-5QE1YJ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-dbus-broker.service-R2sXOd
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-fwupd.service-6SJn8t
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-ModemManager.service-NGlccX
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-power-profiles-daemon.service-HlHOSP
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-rtkit-daemon.service-fCp6tC
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-switcheroo-control.service-0L1YBw
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-systemd-logind.service-8RfaH1
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-upower.service-Gs25i3
+xyz
+[soniya@localhost ~]$ exit
+logout
+[root@localhost ~]# 
+
+==============================================
+
+/tmp  ===> public place  ===> Example   ==> all users have write permission on it.
+
+=============================================
+
+[root@localhost ~]# 
+[root@localhost ~]# touch abc1 abc2 abc3
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc   abc2  abc4  abc6             Desktop    Downloads  Pictures  Templates  xyz
+abc1  abc3  abc5  anaconda-ks.cfg  Documents  Music      Public    Videos
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# touch tcs{1,2,3,4,5}
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc   abc2  abc4  abc6             Desktop    Downloads  Pictures  tcs1  tcs3  tcs5       Videos
+abc1  abc3  abc5  anaconda-ks.cfg  Documents  Music      Public    tcs2  tcs4  Templates  xyz
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# touch  ibm{1..5}
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc   abc2  abc4  abc6             Desktop    Downloads  ibm2  ibm4  Music     Public  tcs2  tcs4  Templates  xyz
+abc1  abc3  abc5  anaconda-ks.cfg  Documents  ibm1       ibm3  ibm5  Pictures  tcs1    tcs3  tcs5  Videos
+[root@localhost ~]# 
+[root@localhost ~]# touch  {amit,sumit}
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc   abc2  abc4  abc6  anaconda-ks.cfg  Documents  ibm1  ibm3  ibm5   Pictures  sumit  tcs2  tcs4  Templates  xyz
+abc1  abc3  abc5  amit  Desktop          Downloads  ibm2  ibm4  Music  Public    tcs1   tcs3  tcs5  Videos
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# touch  rajeev deepak
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc   abc3  abc6             deepak     Downloads  ibm3  Music     rajeev  tcs2  tcs5       xyz
+abc1  abc4  amit             Desktop    ibm1       ibm4  Pictures  sumit   tcs3  Templates
+abc2  abc5  anaconda-ks.cfg  Documents  ibm2       ibm5  Public    tcs1    tcs4  Videos
+[root@localhost ~]# 
+[root@localhost ~]# touch mypersonal
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc   abc3  abc6             deepak     Downloads  ibm3  Music       Public  tcs1  tcs4       Videos
+abc1  abc4  amit             Desktop    ibm1       ibm4  mypersonal  rajeev  tcs2  tcs5       xyz
+abc2  abc5  anaconda-ks.cfg  Documents  ibm2       ibm5  Pictures    sumit   tcs3  Templates
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# touch  /publicfile
+[root@localhost ~]# 
+[root@localhost ~]# ls 
+abc   abc3  abc6             deepak     Downloads  ibm3  Music       Public  tcs1  tcs4       Videos
+abc1  abc4  amit             Desktop    ibm1       ibm4  mypersonal  rajeev  tcs2  tcs5       xyz
+abc2  abc5  anaconda-ks.cfg  Documents  ibm2       ibm5  Pictures    sumit   tcs3  Templates
+[root@localhost ~]# 
+[root@localhost ~]# ls /
+abc  bin   dev  home  lib64  mnt  proc        root  sbin  sys  usr  xyz
+afs  boot  etc  lib   media  opt  publicfile  run   srv   tmp  var
+[root@localhost ~]# 
+[root@localhost ~]# su - soniya  
+[soniya@localhost ~]$ 
+[soniya@localhost ~]$ cd  /root
+-bash: cd: /root: Permission denied
+[soniya@localhost ~]$ 
+[soniya@localhost ~]$ cd  /
+[soniya@localhost /]$ ls
+abc  bin   dev  home  lib64  mnt  proc        root  sbin  sys  usr  xyz
+afs  boot  etc  lib   media  opt  publicfile  run   srv   tmp  var
+[soniya@localhost /]$ 
+[soniya@localhost /]$ exit
+logout
+[root@localhost ~]# 
+
+[root@localhost ~]# touch  alok.txt
+[root@localhost ~]# ls
+abc   abc3  abc6      anaconda-ks.cfg  Documents  ibm2  ibm5        Pictures  sumit  tcs3  Templates
+abc1  abc4  alok.txt  deepak           Downloads  ibm3  Music       Public    tcs1   tcs4  Videos
+abc2  abc5  amit      Desktop          ibm1       ibm4  mypersonal  rajeev    tcs2   tcs5  xyz
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# touch alok{1..5}.txt
+[root@localhost ~]# 
+[root@localhost ~]# ls 
+abc   abc4       alok2.txt  alok.txt         Desktop    ibm2  Music       rajeev  tcs3       Videos
+abc1  abc5       alok3.txt  amit             Documents  ibm3  mypersonal  sumit   tcs4       xyz
+abc2  abc6       alok4.txt  anaconda-ks.cfg  Downloads  ibm4  Pictures    tcs1    tcs5
+abc3  alok1.txt  alok5.txt  deepak           ibm1       ibm5  Public      tcs2    Templates
+[root@localhost ~]# 
+
+[root@localhost ~]# su - soniya 
+[soniya@localhost ~]$ 
+[soniya@localhost ~]$ 
+[soniya@localhost ~]$ touch abc
+[soniya@localhost ~]$ ls
+abc
+[soniya@localhost ~]$ 
+[soniya@localhost ~]$ touch /tmp/myabc
+[soniya@localhost ~]$ 
+[soniya@localhost ~]$ touch /myabc
+touch: cannot touch '/myabc': Permission denied
+[soniya@localhost ~]$ 
+[soniya@localhost ~]$ exit
+logout
+[root@localhost ~]# 
+[root@localhost ~]# touch /myabc
+[root@localhost ~]# 
+
+
+How we can create directory
+
+
+
+=================================================
+
+[root@localhost ~]# 
+[root@localhost ~]# mkdir data
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# mkdir  /data
+[root@localhost ~]# 
+[root@localhost ~]# mkdir /tmp/data
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc   abc4       alok2.txt  alok.txt         deepak     ibm1  ibm5        Public  tcs2  Templates
+abc1  abc5       alok3.txt  amit             Desktop    ibm2  Music       rajeev  tcs3  Videos
+abc2  abc6       alok4.txt  anaconda-ks.cfg  Documents  ibm3  mypersonal  sumit   tcs4  xyz
+abc3  alok1.txt  alok5.txt  data             Downloads  ibm4  Pictures    tcs1    tcs5
+[root@localhost ~]# 
+[root@localhost ~]# ls /
+abc  bin   data  etc   lib    media  myabc  proc        root  sbin  sys  usr  xyz
+afs  boot  dev   home  lib64  mnt    opt    publicfile  run   srv   tmp  var
+[root@localhost ~]# 
+[root@localhost ~]# ls /tmp
+abc
+data
+myabc
+myfile
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-bluetooth.service-U7YlOQ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-colord.service-5QE1YJ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-dbus-broker.service-R2sXOd
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-fwupd.service-6SJn8t
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-ModemManager.service-NGlccX
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-power-profiles-daemon.service-HlHOSP
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-rtkit-daemon.service-fCp6tC
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-switcheroo-control.service-0L1YBw
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-systemd-logind.service-8RfaH1
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-upower.service-Gs25i3
+xyz
+[root@localhost ~]# 
+[root@localhost ~]# mkdir d1 d2 d3 d4
+[root@localhost ~]# ls
+abc   abc4       alok2.txt  alok.txt         d2    deepak     ibm1  ibm5        Public  tcs2  Templates
+abc1  abc5       alok3.txt  amit             d3    Desktop    ibm2  Music       rajeev  tcs3  Videos
+abc2  abc6       alok4.txt  anaconda-ks.cfg  d4    Documents  ibm3  mypersonal  sumit   tcs4  xyz
+abc3  alok1.txt  alok5.txt  d1               data  Downloads  ibm4  Pictures    tcs1    tcs5
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# mkdir raj{1..5}
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc   abc4       alok2.txt  alok.txt         d2    deepak     ibm1  ibm5        Public  raj4    tcs1  tcs5
+abc1  abc5       alok3.txt  amit             d3    Desktop    ibm2  Music       raj1    raj5    tcs2  Templates
+abc2  abc6       alok4.txt  anaconda-ks.cfg  d4    Documents  ibm3  mypersonal  raj2    rajeev  tcs3  Videos
+abc3  alok1.txt  alok5.txt  d1               data  Downloads  ibm4  Pictures    raj3    sumit   tcs4  xyz
+[root@localhost ~]# 
+[root@localhost ~]# cd  /data
+[root@localhost data]# ls
+[root@localhost data]# 
+[root@localhost data]# 
+[root@localhost data]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd  /data
+[root@localhost data]# ls
+[root@localhost data]# 
+[root@localhost data]# 
+[root@localhost data]# cd
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# touch  /data/abc
+[root@localhost ~]# 
+[root@localhost ~]# ls /data
+abc
+[root@localhost ~]# mkdir /data/mydata
+[root@localhost ~]# 
+[root@localhost ~]# ls /data
+abc  mydata
+[root@localhost ~]# 
+
+[root@localhost ~]# cd /data
+[root@localhost data]# 
+[root@localhost data]# 
+[root@localhost data]# ls
+abc  mydata
+[root@localhost data]# 
+[root@localhost data]# mkdir mynewdir
+[root@localhost data]# 
+[root@localhost data]# ls
+abc  mydata  mynewdir
+[root@localhost data]# 
+[root@localhost data]# cd
+[root@localhost ~]# 
+[root@localhost ~]# ls  /data
+abc  mydata  mynewdir
+[root@localhost ~]# 
+[root@localhost ~]# ls /data
+abc  mydata  mynewdir
+[root@localhost ~]# 
+[root@localhost ~]# cd  /data
+[root@localhost data]# ls
+abc  mydata  mynewdir
+[root@localhost data]# cd
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# cd /
+[root@localhost /]# 
+[root@localhost /]# ls
+abc  bin   data  etc   lib    media  myabc  proc        root  sbin  sys  usr  xyz
+afs  boot  dev   home  lib64  mnt    opt    publicfile  run   srv   tmp  var
+[root@localhost /]# 
+[root@localhost /]# 
+[root@localhost /]# cd data
+[root@localhost data]# 
+[root@localhost data]# pwd
+/data
+[root@localhost data]# 
+[root@localhost data]# 
+[root@localhost data]# cd 
+[root@localhost ~]# 
+
+[root@localhost ~]# ls
+abc   abc5       alok4.txt        d1    deepak     ibm2   mypersonal  raj3    tcs1  Templates
+abc1  abc6       alok5.txt        d2    Desktop    ibm3   Pictures    raj4    tcs2  Videos
+abc2  alok1.txt  alok.txt         d3    Documents  ibm4   Public      raj5    tcs3  xyz
+abc3  alok2.txt  amit             d4    Downloads  ibm5   raj1        rajeev  tcs4
+abc4  alok3.txt  anaconda-ks.cfg  data  ibm1       Music  raj2        sumit   tcs5
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# cd  /tmp
+[root@localhost tmp]# cd
+[root@localhost ~]# 
+
+[root@localhost ~]# cd /data
+[root@localhost data]# 
+[root@localhost data]# ls
+abc  mydata  mynewdir
+[root@localhost data]# 
+[root@localhost data]# cd mydata
+[root@localhost mydata]# 
+[root@localhost mydata]# cd
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# cd mydata
+bash: cd: mydata: No such file or directory
+[root@localhost ~]# 
+[root@localhost ~]# cd  /data
+[root@localhost data]# ls
+abc  mydata  mynewdir
+[root@localhost data]# 
+[root@localhost data]# cd /data/mydata
+[root@localhost mydata]# 
+[root@localhost mydata]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd  /data
+[root@localhost data]# 
+[root@localhost data]# ls
+abc  mydata  mynewdir
+[root@localhost data]# 
+[root@localhost data]# cd mydata
+[root@localhost mydata]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd /
+[root@localhost /]# 
+[root@localhost /]# ls
+abc  bin   data  etc   lib    media  myabc  proc        root  sbin  sys  usr  xyz
+afs  boot  dev   home  lib64  mnt    opt    publicfile  run   srv   tmp  var
+[root@localhost /]# 
+[root@localhost /]# cd tmp
+[root@localhost tmp]# cd
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# cd /tmp
+[root@localhost tmp]# 
+[root@localhost tmp]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd /home
+[root@localhost home]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd  /
+[root@localhost /]# 
+[root@localhost /]# cd home
+[root@localhost home]# cd
+[root@localhost ~]# 
+
+[root@localhost ~]# cd /d4
+[root@localhost d4]# 
+[root@localhost d4]# pwd
+/d4
+[root@localhost d4]# cd
+[root@localhost ~]# 
+[root@localhost ~]# tree  /redhat
+/redhat
+└── d1
+    └── d2
+        └── d3
+            └── d4
+
+4 directories, 0 files
+[root@localhost ~]# 
+[root@localhost ~]# pwd
+/root
+[root@localhost ~]# cd  /redhat/d1/d2/d3/d4
+[root@localhost d4]# 
+[root@localhost d4]# touch abc
+[root@localhost d4]# 
+[root@localhost d4]# ls
+abc
+[root@localhost d4]# 
+[root@localhost d4]# touch /d4/myabc
+[root@localhost d4]# 
+[root@localhost d4]# ls 
+abc
+[root@localhost d4]# ls /d4
+myabc
+[root@localhost d4]# cd
+[root@localhost ~]# 
+[root@localhost ~]# ls /d4
+myabc
+[root@localhost ~]# 
+[root@localhost ~]# ls /redhat/d1/d2/d3/d4
+abc
+[root@localhost ~]# 
+
+
+=========================================
+Types of Path ?
+
+
+1- Relative Path
+2- Absolute path
+
+========================================
+[root@localhost ~]# cd  /
+[root@localhost /]# 
+[root@localhost /]# ls
+abc  bin   d4    dev  home  lib64  mnt    opt   publicfile  root  sbin  sys  usr  xyz
+afs  boot  data  etc  lib   media  myabc  proc  redhat      run   srv   tmp  var
+[root@localhost /]# 
+[root@localhost /]# cd home
+[root@localhost home]# 
+[root@localhost home]# ls
+soniya  student  sumit
+[root@localhost home]# cd
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# ls /home
+soniya  student  sumit
+[root@localhost ~]# 
+
+[root@localhost ~]# cd  /
+[root@localhost /]# cd redhat
+[root@localhost redhat]# cd d1
+[root@localhost d1]# cd d2
+[root@localhost d2]# cd d3
+[root@localhost d3]# cd d4
+[root@localhost d4]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd /redhat/d1/d2/d3/d4
+[root@localhost d4]# cd
+[root@localhost ~]# 
+[root@localhost ~]# touch /redhat/d1/d2/d3/d4/mynewabc
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# ls /redhat/d1/d2/d3/d4
+abc  mynewabc
+[root@localhost ~]# 
+
+=================================================
+=================================================
+[root@localhost ~]# cd /etc/sysconfig/network-scripts
+[root@localhost network-scripts]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd /
+[root@localhost /]# cd etc
+[root@localhost etc]# cd sysconfig
+[root@localhost sysconfig]# cd network-scripts
+[root@localhost network-scripts]# cd
+[root@localhost ~]# 
+
+================================================
+[root@localhost ~]# mkdir /linux 
+[root@localhost ~]# 
+[root@localhost ~]# touch  /linux  abc  
+[root@localhost ~]# 
+[root@localhost ~]# ls /linux 
+[root@localhost ~]# 
+[root@localhost ~]# touch  /linux/abc  
+[root@localhost ~]# 
+[root@localhost ~]# ls /linux
+abc
+[root@localhost ~]# 
+[root@localhost ~]# touch /redhat/abc   /linux/newabc
+[root@localhost ~]# 
+
+===============================================
+
+[root@localhost ~]# mkdir /java
+[root@localhost ~]# 
+[root@localhost ~]# cd /java
+[root@localhost java]# 
+[root@localhost java]# mkdir html
+[root@localhost java]# ls
+html
+[root@localhost java]# cd html
+[root@localhost html]# 
+[root@localhost html]# mkdir php
+[root@localhost html]# ls
+php
+[root@localhost html]# cd
+[root@localhost ~]# 
+[root@localhost ~]# tree  /java
+/java
+└── html
+    └── php
+
+2 directories, 0 files
+[root@localhost ~]# 
+[root@localhost ~]# ls /java
+html
+[root@localhost ~]# ls /java/html
+php
+[root@localhost ~]# ls /java/html/php
+[root@localhost ~]# 
+
+[root@localhost ~]# tree  /java
+/java
+└── html
+    └── php
+
+2 directories, 0 files
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# ls /java
+html
+[root@localhost ~]# ls  -R  /java
+/java:
+html
+
+/java/html:
+php
+
+/java/html/php:
+[root@localhost ~]# 
+
+
+How we can create Nesting Directory in single command 
+
+[root@localhost ~]# mkdir /oracle/java/php
+mkdir: cannot create directory ‘/oracle/java/php’: No such file or directory
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# mkdir -p  /oracle/java/php
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# mkdir   /oracle/java/php/data
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# mkdir  -p    /oracle/java/php/data/data1/data2
+[root@localhost ~]# 
+[root@localhost ~]# 
+
+[root@localhost ~]# mkdir --help 
+[root@localhost ~]# mkdir -p  /exam/rhcsa/red/green
+[root@localhost ~]# tree  /exam
+/exam
+└── rhcsa
+    └── red
+        └── green
+
+3 directories, 0 files
+[root@localhost ~]# 
+
+[root@localhost ~]# ls -R /exam
+/exam:
+rhcsa
+
+/exam/rhcsa:
+red
+
+/exam/rhcsa/red:
+green
+
+/exam/rhcsa/red/green:
+[root@localhost ~]# 
+[root@localhost ~]# cd /exam
+[root@localhost exam]# 
+[root@localhost exam]# ls
+rhcsa
+[root@localhost exam]# cd rhcsa
+[root@localhost rhcsa]# 
+[root@localhost rhcsa]# ls
+red
+[root@localhost rhcsa]# 
+[root@localhost rhcsa]# cd red
+[root@localhost red]# ls
+green
+[root@localhost red]# cd green
+[root@localhost green]# 
+[root@localhost green]# ls
+[root@localhost green]# 
+[root@localhost green]# pwd
+/exam/rhcsa/red/green
+[root@localhost green]# 
+[root@localhost green]# cd ..
+[root@localhost red]# cd ..
+[root@localhost rhcsa]# cd ../..
+[root@localhost /]# 
+[root@localhost /]# cd  /
+[root@localhost /]# cd / 
+[root@localhost /]# 
+[root@localhost /]# cd
+[root@localhost ~]# 
+
+
+===============================================
+
+/root/Documents/myphp/myhtml
+
+
+
+[root@localhost ~]# ls
+abc   abc5       alok4.txt        d1    deepak     ibm2   mypersonal  raj3    tcs1  Templates
+abc1  abc6       alok5.txt        d2    Desktop    ibm3   Pictures    raj4    tcs2  Videos
+abc2  alok1.txt  alok.txt         d3    Documents  ibm4   Public      raj5    tcs3  xyz
+abc3  alok2.txt  amit             d4    Downloads  ibm5   raj1        rajeev  tcs4
+abc4  alok3.txt  anaconda-ks.cfg  data  ibm1       Music  raj2        sumit   tcs5
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# mkdir -p /root/Documents/php/html
+[root@localhost ~]# 
+[root@localhost ~]# ls Documents
+php
+[root@localhost ~]# 
+[root@localhost ~]# ls /root/Documents
+php
+[root@localhost ~]# ls  ~/Documents
+php
+[root@localhost ~]# 
+
+[root@localhost ~]# mkdir -p   Documents/php/html/java/php
+
+[root@localhost ~]# mkdir -p   documents/php/html/java/php
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc   abc5       alok4.txt        d1    deepak     ibm1  Music       raj2    sumit  tcs5
+abc1  abc6       alok5.txt        d2    Desktop    ibm2  mypersonal  raj3    tcs1   Templates
+abc2  alok1.txt  alok.txt         d3    documents  ibm3  Pictures    raj4    tcs2   Videos
+abc3  alok2.txt  amit             d4    Documents  ibm4  Public      raj5    tcs3   xyz
+abc4  alok3.txt  anaconda-ks.cfg  data  Downloads  ibm5  raj1        rajeev  tcs4
+[root@localhost ~]# 
+[root@localhost ~]# cd documents
+[root@localhost documents]# ls
+php
+[root@localhost documents]# cd
+[root@localhost ~]# 
+
+===============================================
+
+[root@localhost ~]# cat abc
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# cat data
+cat: data: Is a directory
+[root@localhost ~]# 
+[root@localhost ~]# 
+
+
+================================================
+
+[root@localhost ~]# 
+[root@localhost ~]# cd /exam
+[root@localhost exam]# ls
+rhcsa
+[root@localhost exam]# cd rhcsa
+[root@localhost rhcsa]# 
+[root@localhost rhcsa]# ls
+red
+[root@localhost rhcsa]# cd red
+[root@localhost red]# ls
+green
+[root@localhost red]# cd green
+[root@localhost green]# ls
+[root@localhost green]# 
+[root@localhost green]# ls  ~
+abc   abc5       alok4.txt        d1    deepak     ibm2   mypersonal  raj3    tcs1  Templates
+abc1  abc6       alok5.txt        d2    Desktop    ibm3   Pictures    raj4    tcs2  Videos
+abc2  alok1.txt  alok.txt         d3    Documents  ibm4   Public      raj5    tcs3  xyz
+abc3  alok2.txt  amit             d4    Downloads  ibm5   raj1        rajeev  tcs4
+abc4  alok3.txt  anaconda-ks.cfg  data  ibm1       Music  raj2        sumit   tcs5
+[root@localhost green]# 
+[root@localhost green]# 
+[root@localhost green]# 
+[root@localhost green]# touch ~/newabc
+[root@localhost green]# 
+[root@localhost green]# ls
+[root@localhost green]# 
+[root@localhost green]# ls ~
+abc   abc5       alok4.txt        d1    deepak     ibm2   mypersonal  raj2    sumit  tcs5
+abc1  abc6       alok5.txt        d2    Desktop    ibm3   newabc      raj3    tcs1   Templates
+abc2  alok1.txt  alok.txt         d3    Documents  ibm4   Pictures    raj4    tcs2   Videos
+abc3  alok2.txt  amit             d4    Downloads  ibm5   Public      raj5    tcs3   xyz
+abc4  alok3.txt  anaconda-ks.cfg  data  ibm1       Music  raj1        rajeev  tcs4
+[root@localhost green]# 
+[root@localhost green]# ls /root
+abc   abc5       alok4.txt        d1    deepak     ibm2   mypersonal  raj2    sumit  tcs5
+abc1  abc6       alok5.txt        d2    Desktop    ibm3   newabc      raj3    tcs1   Templates
+abc2  alok1.txt  alok.txt         d3    Documents  ibm4   Pictures    raj4    tcs2   Videos
+abc3  alok2.txt  amit             d4    Downloads  ibm5   Public      raj5    tcs3   xyz
+abc4  alok3.txt  anaconda-ks.cfg  data  ibm1       Music  raj1        rajeev  tcs4
+[root@localhost green]# 
+[root@localhost green]# pwd
+/exam/rhcsa/red/green
+[root@localhost green]# 
+[root@localhost green]# touch /tmp/mynewabc
+[root@localhost green]# 
+[root@localhost green]# ls /tmp
+abc
+data
+myabc
+myfile
+mynewabc
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-bluetooth.service-U7YlOQ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-colord.service-5QE1YJ
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-dbus-broker.service-R2sXOd
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-fwupd.service-6SJn8t
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-ModemManager.service-NGlccX
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-power-profiles-daemon.service-HlHOSP
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-rtkit-daemon.service-fCp6tC
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-switcheroo-control.service-0L1YBw
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-systemd-logind.service-8RfaH1
+systemd-private-c752f846a7e54e00b93d7c4a8314802f-upower.service-Gs25i3
+xyz
+[root@localhost green]# 
+[root@localhost green]# 
+[root@localhost green]# touch  /mykrishna
+[root@localhost green]# 
+[root@localhost green]# ls /
+abc  boot  dev   home  lib64  mnt        opt     publicfile  run   sys  var
+afs  d4    etc   java  linux  myabc      oracle  redhat      sbin  tmp  xyz
+bin  data  exam  lib   media  mykrishna  proc    root        srv   usr
+[root@localhost green]# 
+[root@localhost green]# 
+[root@localhost green]# 
+[root@localhost green]# 
+[root@localhost green]# 
+[root@localhost green]# pwd
+/exam/rhcsa/red/green
+[root@localhost green]# 
+[root@localhost green]# touch ../abc
+[root@localhost green]# 
+[root@localhost green]# 
+[root@localhost green]# ls ..  
+abc  green
+[root@localhost green]# mkdir  ../../newdata
+[root@localhost green]# 
+[root@localhost green]# ls ../..
+newdata  red
+[root@localhost green]# ls
+[root@localhost green]# 
+[root@localhost green]# ls  ..
+abc  green
+[root@localhost green]# ls  ../
+abc  green
+[root@localhost green]# mkdir yellow
+[root@localhost green]# 
+[root@localhost green]# ls
+yellow
+[root@localhost green]# touch yellow/abc
+[root@localhost green]# ls
+yellow
+[root@localhost green]# ls yellow
+abc
+[root@localhost green]# ls /
+abc  boot  dev   home  lib64  mnt        opt     publicfile  run   sys  var
+afs  d4    etc   java  linux  myabc      oracle  redhat      sbin  tmp  xyz
+bin  data  exam  lib   media  mykrishna  proc    root        srv   usr
+[root@localhost green]# 
+[root@localhost green]# cd ..
+[root@localhost red]# 
+[root@localhost red]# cd ../..
+[root@localhost exam]# 
+[root@localhost exam]# cd /
+[root@localhost /]# 
+[root@localhost /]# cd
+
+
+
+==========================================
+
+cd  ..  ==>   one level back from the current
+cd  ../.. ==>  two level back from the current
+cd  -   ===> go on last working directory
+==========================================
+[root@localhost ~]# cd /exam/rhcsa
+[root@localhost rhcsa]# 
+[root@localhost rhcsa]# cd
+[root@localhost ~]# 
+[root@localhost ~]# date
+Sat Oct  5 11:02:05 AM IST 2024
+[root@localhost ~]# cal
+    October 2024    
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30 31      
+                    
+[root@localhost ~]# 
+[root@localhost ~]# cd  -
+/exam/rhcsa
+[root@localhost rhcsa]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd /tmp
+[root@localhost tmp]# cd
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# cd  ..
+[root@localhost /]# 
+[root@localhost /]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd /tmp
+[root@localhost tmp]# cd
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# cd  -
+/tmp
+[root@localhost tmp]# 
+[root@localhost tmp]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd  .   ===> current working directory
+
+
+[root@localhost ~]# ls
+abc   abc5       alok4.txt        d1    deepak     ibm2   mypersonal  raj2    sumit  tcs5
+abc1  abc6       alok5.txt        d2    Desktop    ibm3   newabc      raj3    tcs1   Templates
+abc2  alok1.txt  alok.txt         d3    Documents  ibm4   Pictures    raj4    tcs2   Videos
+abc3  alok2.txt  amit             d4    Downloads  ibm5   Public      raj5    tcs3   xyz
+abc4  alok3.txt  anaconda-ks.cfg  data  ibm1       Music  raj1        rajeev  tcs4
+[root@localhost ~]# 
+[root@localhost ~]# ls  .
+abc   abc5       alok4.txt        d1    deepak     ibm2   mypersonal  raj2    sumit  tcs5
+abc1  abc6       alok5.txt        d2    Desktop    ibm3   newabc      raj3    tcs1   Templates
+abc2  alok1.txt  alok.txt         d3    Documents  ibm4   Pictures    raj4    tcs2   Videos
+abc3  alok2.txt  amit             d4    Downloads  ibm5   Public      raj5    tcs3   xyz
+abc4  alok3.txt  anaconda-ks.cfg  data  ibm1       Music  raj1        rajeev  tcs4
+[root@localhost ~]# 
+
+=====================================
+
+cd  ..  ===> one level back
+cd  .   ===> current 
+
+=====================================
+
+[root@localhost ~]# cd  /exam
+[root@localhost exam]# 
+[root@localhost exam]# cp   /etc/passwd    .
+[root@localhost exam]# 
+[root@localhost exam]# ls
+passwd  rhcsa
+[root@localhost exam]# 
+[root@localhost exam]# cp  /etc/crontab     /exam
+[root@localhost exam]# 
+[root@localhost exam]# cd
+[root@localhost ~]# mkdir  ./deep
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc   abc5       alok4.txt        d1    deep       ibm1  Music       Pictures  raj4    tcs2       Videos
+abc1  abc6       alok5.txt        d2    deepak     ibm2  myabc       Public    raj5    tcs3       xyz
+abc2  alok1.txt  alok.txt         d3    Desktop    ibm3  myabc1      raj1      rajeev  tcs4
+abc3  alok2.txt  amit             d4    Documents  ibm4  mypersonal  raj2      sumit   tcs5
+abc4  alok3.txt  anaconda-ks.cfg  data  Downloads  ibm5  newabc      raj3      tcs1    Templates
+[root@localhost ~]# 
+[root@localhost ~]# cp /etc/crontab   .
+[root@localhost ~]# 
+[root@localhost ~]# ls
+abc   abc6       alok.txt         d3       Documents  ibm5        Pictures  raj5    tcs4
+abc1  alok1.txt  amit             d4       Downloads  Music       Public    rajeev  tcs5
+abc2  alok2.txt  anaconda-ks.cfg  data     ibm1       myabc       raj1      sumit   Templates
+abc3  alok3.txt  crontab          deep     ibm2       myabc1      raj2      tcs1    Videos
+abc4  alok4.txt  d1               deepak   ibm3       mypersonal  raj3      tcs2    xyz
+abc5  alok5.txt  d2               Desktop  ibm4       newabc      raj4      tcs3
+[root@localhost ~]# 
+
+======================================
+
+cd  Directoryname  ===> to go into this directory
+cd
+cd ~               ===> go in my home directory
+cd  /root
+cd /               ====> always move on / directiory
+
+cd  ..     ===>
+cd  ../..  ===>
+cd  -      ===>
+cd  .
+
+=======================================
+[root@localhost ~]# cd /tmp
+[root@localhost tmp]# 
+[root@localhost tmp]# touch ../rajat
+[root@localhost tmp]# 
+[root@localhost tmp]# ls ..
+abc  boot  dev   home  lib64  mnt        opt     publicfile  root  srv  usr
+afs  d4    etc   java  linux  myabc      oracle  rajat       run   sys  var
+bin  data  exam  lib   media  mykrishna  proc    redhat      sbin  tmp  xyz
+[root@localhost tmp]# 
+[root@localhost tmp]# cd
+[root@localhost ~]# 
+
+======================================
+How we can create naming space with any file and directory name
+
+
+   method-1
+   method-2
+   method-3
+[root@localhost ~]# mkdir new\ songs
+[root@localhost ~]# 
+[root@localhost ~]# ls
+
+[root@localhost ~]# cd  new songs
+bash: cd: too many arguments
+[root@localhost ~]# 
+[root@localhost ~]# cd  new\ songs
+[root@localhost new songs]# 
+[root@localhost new songs]# pwd
+/root/new songs
+[root@localhost new songs]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd  new\ songs
+[root@localhost new songs]# 
+[root@localhost new songs]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd "new songs"
+[root@localhost new songs]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd 'new songs'
+[root@localhost new songs]# 
+[root@localhost new songs]# cd
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# mkdir new\ movie
+[root@localhost ~]# 
+[root@localhost ~]# mkdir "my new movie"
+[root@localhost ~]# 
+[root@localhost ~]# mkdir 'my new songs'
+[root@localhost ~]# 
+[root@localhost ~]# mkdir raj\ kumar\ sharma
+[root@localhost ~]# 
+[root@localhost ~]# cd raj\ kumar\ sharma
+[root@localhost raj kumar sharma]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd "new movie"
+[root@localhost new movie]# cd
+[root@localhost ~]# cd 'new movie'
+[root@localhost new movie]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd new\ movie
+[root@localhost new movie]# cd
+[root@localhost ~]# 
+[root@localhost ~]# 
+
+
+what is the use of TAB key in Linux  ?
+
+
+1- Path Complete
+2- Command name
+
+[root@localhost ~]# cd /etc
+[root@localhost etc]# cd
+[root@localhost ~]# 
+[root@localhost ~]# cd /etc/
+[root@localhost etc]# 
+[root@localhost etc]# cd
+[root@localhost ~]# 
+
+========================================
+
+[root@localhost ~]# ls /usr/libexec/utempter
+utempter
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# cd /usr
+[root@localhost usr]# cd libexec
+[root@localhost libexec]# 
+[root@localhost libexec]# cd utempter
+[root@localhost utempter]# cd
+[root@localhost ~]# 
+
+=======================================
+touch
+mkdir
+mkdir -p
+ls
+ls ..
+ls ../..
+ls .
+cd 
+cd ..
+cd ../..
+cd /
+cd ~
+cd -
+cd  .
+ls 
+ls -R
+tree
+
+======================================== Complete Data ===>  /   ===> Default data + Custom data 
+========================================
+File Create + Edit + Modify  ===> Not covered
+Copy + Remove + Rename + Move  ==> not Covered
+Command  ==> systax + Options
+========================================
+
+touch  ===> we can create only blank file but we can not edit,modify the content of any file.
+
+===> File Creation Command OR File Management Command  
+
+
+mkdir ==> directory Creation
+
+cd    ===> go into any directory
+cat   ===> only use to read the content of any file on ther terminal
+
+==========================================
+/
+/root  OR  ~
+root
+==========================================
+/home
+/home/sachin  OR  ~
+sachin
